@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session, jsonify,flash, send_from_directory
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify,flash, send_from_directory, Response
 from flask_cors import CORS
 from flask_wtf.csrf import CSRFProtect
 
@@ -770,9 +770,12 @@ def get_user_profile():
 def serve_root_files(filename):
     return send_from_directory('.', filename)
 
+
 @app.route('/sitemap.xml')
-def sitemap():
-    return send_from_directory('.', 'sitemap.xml')
+def serve_sitemap():
+    with open('sitemap.xml', 'r') as file:
+        sitemap_content = file.read()
+    return Response(sitemap_content, mimetype='application/xml')
 
 if __name__ == '__main__':
     app.run(debug=False)
