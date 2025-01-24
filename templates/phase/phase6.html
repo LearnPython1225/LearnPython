@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content" class="smooth-scroll" id="scrollToLearningContent">Learning Content</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+           
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Phase 6: Advanced Topics</h1>
+            <p><b>Goal:</b> Dive deeper into Python’s advanced functionalities like functional programming and multithreading.</p>
+            <ul>
+                <li>Functional Programming</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        
+        <!-- Subsection 1: Lambda Functions -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Lambda Functions</h3>
+            <a href="{{ url_for('learn',chp='6.54') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Lambda functions or anonymous functions are small, one-line functions that are not defined with a standard 'def' keyword but with the 'lambda' keyword.
+            <ul>
+                <li>Lambda functions can take any number of arguments but only have one expression.</li>
+                <li>They are used for creating small, throw-away functions that are often used where function objects are required.</li>
+                <li>Commonly used in higher-order functions such as map(), filter(), and reduce().</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 2: Sort Function -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Sort Function</h3>
+            <a href="{{ url_for('learn',chp='6.55') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Sorting is a fundamental aspect of data manipulation in Python, involving rearranging data in a specific order. The sort() method modifies the list it is called on, while the sorted() function creates a new sorted list from the elements of any iterable.
+            <ul>
+                <li>The sort() method is an in-place sort, meaning it does not return a new list. Instead, it modifies the original list.</li>
+                <li>The sorted() function returns a new sorted list from the elements of any iterable, leaving the original iterable unchanged.</li>
+                <li>Both sort() and sorted() accept a 'key' parameter to specify a function to be called on each list element before making comparisons.</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 3: Map Function -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Map Function</h3>
+            <a href="{{ url_for('learn',chp='6.56') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The map() function applies a given function to each item of an iterable (like a list) and returns a list of the results.
+            <ul>
+                <li>The map() function takes a function and one or more iterables as arguments.</li>
+                <li>It's often used for transforming data efficiently without explicit loops.</li>
+                <li>The result is a map object which is an iterator that needs to be converted into a list or another iterable type to see the results.</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 4: Filter Function -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Filter Function</h3>
+            <a href="{{ url_for('learn',chp='6.57') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The filter() function creates an iterator from elements of an iterable for which a function returns true.
+            <ul>
+                <li>Similar to map(), filter() takes a function and an iterable, but the function must return a boolean value.</li>
+                <li>It's used to select certain pieces of data from a list, tuple, or other collection.</li>
+                <li>Like map(), the result of filter() is also an iterator and needs to be converted to a list or tuple to be seen.</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 5: Reduce Function -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Reduce Function</h3>
+            <a href="{{ url_for('learn',chp='6.58') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The reduce() function reduces an iterable to a single cumulative value. It applies a function of two arguments cumulatively to the items of an iterable.
+            <ul>
+                <li>It is part of the functools module, unlike map() and filter() which are built-ins.</li>
+                <li>Commonly used for performing some computation on a list and returning the result.</li>
+                <li>It can be used to implement functions that are aggregative in nature.</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 6: List Comprehensions -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>List Comprehensions</h3>
+            <a href="{{ url_for('learn',chp='6.59') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.
+            <ul>
+                <li>A more concise and readable way to create lists than using loops and lambda functions.</li>
+                <li>Supports conditional logic within the comprehension itself.</li>
+                <li>Often used for filtering and transforming data.</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 7: Dictionary Comprehensions -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Dictionary Comprehensions</h3>
+            <a href="{{ url_for('learn',chp='6.60') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Dictionary comprehensions are similar to list comprehensions, but allow you to easily construct dictionaries.
+            <ul>
+                <li>Allows for quick transformation of one dictionary or pairing of two lists into a dictionary.</li>
+                <li>Can include conditional logic to include only certain elements.</li>
+                <li>Useful for creating dictionaries in a succinct and intuitive way.</li>
+            
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 8: Zip Function -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Zip Function</h3>
+            <a href="{{ url_for('learn',chp='6.61') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The zip() function takes iterables (can be zero or more), aggregates them in a tuple, and returns it.
+            <ul>
+                <li>Useful for creating pairs of elements when you have multiple lists of the same length.</li>
+                <li>If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.</li>
+                <li>Commonly used for simultaneous looping over multiple lists.</li>
+            
+            </ul>
+        </div>
+
+        
+        
+
+        
+
+        
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,223 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #111;
+    color: #f5f5f7;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.back-link {
+    color: #f5f5f7; /* 与主题颜色一致 */
+    text-decoration: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-left: -50rem;
+    transition: color 0.3s ease;
+    
+}
+
+.back-link:hover {
+    color: #0071e3; /* 鼠标悬停时的颜色 */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #f5f5f7;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: 16px;
+    padding: 0 10px;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #bbb;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px; 
+    min-height: 80vh; 
+    background: linear-gradient(to bottom, #000 10%, #111);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    color: #ccc;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.btn-primary {
+    background: #0071e3;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 24px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #005bb5;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: #1f70c1;
+    color: #f5f5f7;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 24px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    
+}
+
+.info-section h2 {
+    margin-bottom: 1rem; /* 缩小标题与下面内容的间距 */
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Community Section */
+/* Info Sections */
+.info-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-section h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 2rem; /* 减少上下 padding */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 0; /* 去掉额外的顶部间距 */
+}
+
+/* Cards */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 每个方块最小300px，最大等分 */
+    gap: 1.5rem; /* 方块间距 */
+}
+
+.card {
+    background: #1c1c1e;
+    border-radius: 16px; /* 圆角增加 */
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 增加轻微阴影 */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+    background: #2c2c2e;
+    transform: translateY(-5px); /* 鼠标悬浮时轻微上移 */
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    color: #888;
+    font-size: 0.9rem;
+    background: #000;
+    margin-top: 4rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='subscription.css') }}">
+      <meta name="csrf-token" content="{{ csrf_token() }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('home') }}#pricing">Pricing</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="subscription-container">
+        <h1>Verify Purchase Details</h1>
+        <div class="plans">
+            <section class="plan">
+                <h2>Standard Tier</h2>
+                <p>Single Purchase Membership</p>
+                <ul>
+                    <li>Limited Online AI Assistance allows up to 20 inquiries per day.</li>
+                    <li>Full Access to Approximately 50 Courses</li>
+                    <li>Basic Online Code Editor</li>
+                    <li>No Additional Work and Tasks</li>
+                </ul>
+                <p id="money">Please ensure the email address used for this purchase matches the one registered on our platform to guarantee access.</p>
+                <div id="paypal-button-container-P-034517146R056351VM5VNHLQ"></div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=BAAFm00ETr7S9b7oqvlBvs3kew5oqND1wtiDOJIWbf7vOELR_w3TT--3oTb1v_GYd6Nfg_AMG1kFG6dKUo&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+<div id="paypal-container-3KYQQGX96RP5C"></div>
+<script>
+    paypal.HostedButtons({
+    hostedButtonId: "3KYQQGX96RP5C",
+    }).render("#paypal-container-3KYQQGX96RP5C")
+</script>
+                
+            </section>
+
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

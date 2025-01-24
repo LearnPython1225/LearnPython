@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profilebutton.css') }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="#" id="scrollToTop">LearnPython</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#features" class="smooth-scroll" id="scrollToFeatures">Features</a></li>
+                <li><a href="#courses" class="smooth-scroll" id="scrollToLearning Path">Learning Path</a></li>
+                <li><a href="#pricing" class="smooth-scroll" id="scrollToPricing">Pricing</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+                {% if session.get('logged_in') %}
+                    <!-- 如果已登录，显示 Learn 和 Log Out -->
+                    <div class="profile-menu">
+                        <!-- Profile Button -->
+                        <a id="profileButton" class="profile-icon">Profile</a>
+                    
+                        <!-- Profile Details Dropdown -->
+                        <div id="profileDetails" class="profile-details hidden">
+                            <!-- Profile Header -->
+                            <div class="profile-header">
+        
+                                <div class="profile-info">
+                                    <p>Username: <span id="userName"></span></p>
+                                    <p>Email: <span id="userEmail"></span></p>
+                                    <p>Tier: <span id="userTier"></span></p>
+                                    <p>Ai quota: <span id="userAiquota"></span></p>
+                                </div>
+                            
+                            </div>
+                    
+                            <!-- Profile Actions -->
+                            <div class="profile-actions">
+                                <a class="profile-action" href="mailto:learnpython1225@gmail.com">
+                                    <i class="icon-headphones"></i> Contact Us
+                                </a>
+                                <a class="profile-action logout" href="{{ url_for('logout') }}">
+                                    <i class="icon-logout"></i> Log Out
+                                </a>
+                            </div>
+                    
+                            <!-- Profile Footer -->
+                            <div class="profile-footer">
+                                <p>LearnPython</p>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <!-- 如果未登录，显示 Login 和 Register -->
+                    <li><a href="{{ url_for('login') }}">Login</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                {% endif %}
+
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#login" class="login-trigger">Login</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Learn Python from Scratch</h1>
+            <p>Comprehensive learning paths meticulously crafted for individuals starting from zero, specifically designed to guide beginners through the fundamentals of Python up to intermediate levels.</p>
+            <a href="{{ url_for('unlock') }}" class="btn-primary">Get Started</a>
+            <p></p>
+            <a href="{{ url_for('learn',chp='1.1') }}" class="btn-primary">Demo Lesson</a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="info-section" id="features">
+        <h2>Our Features</h2>
+        <div class="features">
+            <div class="feature-item">
+                <h3>Beginner Basics</h3>
+                <p>Master core concepts: variables, data types, control flow, and functions.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Online AI Assistant</h3>
+                <p>Get real-time help, suggestions, and guidance powered by AI—your personal coding assistant.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Basic Online Code Editor</h3>
+                <p>Write, run, and test code directly in your browser—no setup required.</p>
+            </div>
+            <div class="feature-item">
+                <h3>Real-World Projects</h3>
+                <p>Apply your knowledge to build real projects, strengthening your practical skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-section" id="courses">
+        <h2>Our Learning Path</h2>
+        <div class="features">
+            <!-- Phase 1: Python Basics -->
+            <div class="feature-item">
+                <h3>Python Basics</h3>
+                <p>Understand Python syntax and learn the foundations of programming.</p>
+                <p>1. Print Statement</p>
+                <p>2. Variables and Data Types</p>
+                <p>3. String Manipulation</p>
+                <p>4. Basic Input and Output</p>
+            </div>
+
+            <!-- Phase 2: Control Flow -->
+            <div class="feature-item">
+                <h3>Control Flow</h3>
+                <p>Master if-else statements, loops, and conditional logic in Python.</p>
+                <p>1. Conditional Statements</p>
+                <p>2. Loops</p>
+                <p>3. Exception Handling</p>
+            </div>
+
+            <!-- Phase 3: Data Structures -->
+            <div class="feature-item">
+                <h3>Data Structures</h3>
+                <p>Learn about lists, dictionaries, sets, and tuples for efficient data management.</p>
+                <p>1. Lists and Tuples</p>
+                <p>2. Sets and Dictionaries</p>
+                <p>3. Data Handling Techniques</p> 
+            </div>
+
+            <!-- Phase 4: Functions and Scope -->
+            <div class="feature-item">
+                <h3>Functions and Scope</h3>
+                <p>Understand how to define and use functions, and explore variable scope.</p>
+                <p>1. Function Basics</p>
+                <p>2. Scope and Parameters</p>
+            </div>
+
+            <!-- Phase 5: Graphic Module (Turtle) -->
+            <div class="feature-item">
+                <h3>Graphic Module (Turtle)</h3>
+                <p>Create fun and interactive graphics using Python's Turtle module.</p>
+                <p>1. Basic Graphics</p>
+                <p>2. Advanced Graphics</p>
+            </div>
+
+            <!-- Phase 6: File Operations -->
+            <div class="feature-item">
+                <h3>File Handling</h3>
+                <p>Work with files: reading, writing, and managing data.</p>
+                <p>1. File Reading and Writing</p>
+                <p>2. File Management</p>
+            </div>
+
+            <!-- Phase 7: Object-Oriented Programming (OOP) -->
+            <div class="feature-item">
+                <h3>Object-Oriented Programming (OOP)</h3>
+                <p>Learn about classes, objects, and the principles of OOP in Python.</p>
+                <p>1. Classes and Objects</p>
+                <p>2. Inheritance and Polymorphism</p>
+            </div>
+
+            <!-- Phase 8: Advanced Topics -->
+            <div class="feature-item">
+                <h3>Advanced Topics</h3>
+                <p>Dive into advanced topics like Functional Programming.</p>
+                <p>1. Functional Programming</p>
+                <p>2. Multithreading and Multiprocessing</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="info-section" id="pricing">
+        <h2>Flexible Pricing Plans</h2>
+        <div class="pricing-cards">
+            <div class="card">
+                <h3>Standard Tier</h3>
+                <p class="price">$9.99</p>
+                <p>Limited Online AI Assistance</p>
+                <p>Full Access to Approximately 50 Courses</p>
+                <p>Basic Online Code Editor</p>
+                <p>No Additional Work and Tasks</p>
+                <br>
+                <a href="{{ url_for('standard') }}" class="btn-secondary">Purchase</a>
+            </div>
+            <div class="card">
+                <h3>Additional Learning Materials</h3>
+                <p class="price">$4.99</p>
+                <p></p>
+                <p>Additional Work and Tasks</p>
+                <br>
+                <a href="{{ url_for('learning_materials') }}" class="btn-secondary">Purchase</a>
+            </div>
+            <div class="card">
+                <h3>Full Access Plan</h3>
+                <p class="price">$12</p>
+                <p>Limited Online AI Assistance</p>
+                <p>Full Access to Approximately 50 Coursess</p>
+                <p>Basic Online Code Editor</p>
+                <p>Additional Work and Tasks</p>
+                <br>
+                <a href="{{ url_for('full_access_plan') }}" class="btn-secondary">Purchase</a>
+                
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="https://www.reddit.com/r/Learnpython1225/" target="_blank" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

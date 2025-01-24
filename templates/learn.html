@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn Python</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='learn.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='coding.css') }}">
+  
+
+  <!-- 先引入loader.min.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- Add these lines in the head section, after your existing scripts -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta name="user-id" content="{{ session.get('user_id', 'anonymous') }}">
+  <script src="{{ url_for('static', filename='js/security.js') }}"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+   
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="{{ url_for('phase', phase_number=content.phases | safe ) }}">phase {{ content.phases | safe }}</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="left-top">
+                <h2>{{ content.title | safe }}</h2>
+                <p>{{ content.des | safe }}</p>
+                <h3>Key Point:</h3>
+                <ul>
+                    <li>{{ content.keypoint1 | safe }}</li>
+                    <li>{{ content.keypoint2 | safe }}</li>
+                    <li>{{ content.keypoint3 | safe }}</li>
+                </ul>
+                    
+
+                <div class="section-title">Examples</div>
+                <pre class="language-python">
+                    <code class="language-python">{{ content.example }}</code>
+                        </pre>
+
+
+                <div class="section-title">Tasks</div>
+                <p>{{ content.task1 | safe }}</p>
+                <p>{{ content.task2 | safe }}</p>
+            </div>
+
+            <div id="resizer-horizontal-left" class="resizer-horizontal-left"></div>
+
+            <div class="left-bottom">
+                <h3>
+                    <div id="ai-assistance-header">
+                        <span>AI Assistance</span>
+                        <button class="hide-btn" id="hideButton">Hide</button>
+                    </div>
+                </h3>
+                <div class="chatgpt-container">
+                    <div id="chatMessages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="userMessage" placeholder="Ask ChatGPT...">
+                        <button id="sendBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resizer" id="resizer"></div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <div class="editor-header">
+                <span>VS Code-like Editor</span>
+                <button id="runCode" class="run-btn">Run</button>
+                <button id="clearTerminal" class="run-btn">Clear</button>
+            </div>
+            <div class="editor-area">
+                <!-- 使用 #editor 作为编辑器容器ID -->
+                <div id="editor" class="editor"></div>
+
+                <div id="resizer-horizontal" class="resizer-horizontal"></div>
+
+                <div class="terminal">
+                    <!-- 使用 #terminalOutput 显示输出 -->
+                    <div id="terminalOutput" class="terminal-output"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='js/monaco_editor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/learn.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatgpt.js') }}"></script>
+    <script src="prism.js"></script>
+</body>
+</html>
+

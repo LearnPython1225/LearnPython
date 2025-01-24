@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+ 
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content" class="smooth-scroll" id="scrollToLearningContent">Learning Content</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+             
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Phase 4: Functions and Scope</h1>
+            <p><b>Goal:</b> Master the basics of defining and using functions, including arguments, return values, and scope.</p>
+            <ul>
+                <li>Function Basics</li>
+                <li>Scope and Parameters</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        
+        <!-- Subsection 1: Functions -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Functions</h3>
+            <a href="{{ url_for('learn',chp='4.21') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Functions are reusable blocks of code that perform a specific task and are executed when called.
+            <ul>
+                <li>Functions are defined using the 'def' keyword followed by a name and parentheses which can contain parameters.</li>
+                <li>Functions improve code reusability and make the code organized and manageable.</li>
+                <li>They can take parameters to receive input values and can call other functions within them.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 2: Return Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Return Statement</h3>
+            <a href="{{ url_for('learn',chp='4.22') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The return statement in a function sends a result back to the caller and exits the function.
+            <ul>
+                <li>Functions can return a value that can be used later in the program.</li>
+                <li>Without a return statement, a function will return None by default.</li>
+                <li>Return statements can be used to return multiple values from a function using tuples.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 3: Keyword Arguments -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Keyword Arguments</h3>
+            <a href="{{ url_for('learn',chp='4.23') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Keyword arguments allow you to pass arguments to a function with a keyword so order does not matter.
+            <ul>
+                <li>Keyword arguments are passed by explicitly identifying the parameters by their names in the function call.</li>
+                <li>They improve the readability of function calls by specifying what each argument represents.</li>
+                <li>Default values can be assigned to function parameters to make them optional during a function call.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 4: Nested Function Calls -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Nested Function Calls</h3>
+            <a href="{{ url_for('learn',chp='4.24') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Nested function calls involve calling one function inside another in a single statement.
+            <ul>
+                <li>The innermost function call is executed first; its return value is passed up to the next outer function.</li>
+                <li>This technique is often used for processing data before passing it to another function.</li>
+                <li>It can be used to create concise code but may sacrifice readability if overused.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 5: Variable Scope -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Variable Scope</h3>
+            <a href="{{ url_for('learn',chp='4.25') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Variable scope determines the accessibility of variables based on where they are declared.
+            <ul>
+                <li>Global variables are accessible from anywhere in the program, local variables are only accessible within their scope.</li>
+                <li>Local scope pertains to variables declared within a function or block.</li>
+                <li>Understanding scope is crucial for managing how data is stored and modified throughout a program.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 6: Args -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Args</h3>
+            <a href="{{ url_for('learn',chp='4.26') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The *args parameter in a function allows it to accept an arbitrary number of positional arguments.
+            <ul>
+                <li>*args collects extra positional arguments as a tuple which makes it flexible in function calls.</li>
+                <li>It's useful for functions where the number of inputs may vary.</li>
+                <li>Commonly used in functions that need to iterate over multiple arguments performing similar operations.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 7: Kwargs -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Kwargs</h3>
+            <a href="{{ url_for('learn',chp='4.27') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The **kwargs parameter allows a function to accept any number of keyword arguments.
+            <ul>
+                <li>**kwargs collects extra keyword arguments as a dictionary, making functions extremely flexible.</li>
+                <li>Useful for configurations where a function accepts various options as keyword arguments.</li>
+                <li>Keywords arguments can be iterated over if you need to process them individually.</li>
+                
+            </ul>
+        </div>
+
+        
+
+        
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

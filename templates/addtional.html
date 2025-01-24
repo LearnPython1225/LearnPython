@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profilebutton.css') }}">
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#Task" class="smooth-scroll" id="scrollToTask">Task</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Additional Learning Materials</h1>
+            <p>Supplementary resources to deepen your Python knowledge with tasks, examples, and downloadable files.</p>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="Task">
+        <h2>Task</h2>
+        
+
+        <!-- Task 1:  -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Task 1 - Library Management System</h3>
+            <a href="/static/task/Task_1.zip" download="Task_1.zip" class="btn-secondary">Download</a>
+            </div>
+
+            <p>
+                <b>Objective: </b>Write a Python program to manage a library’s book records, including checking availability, updating statuses, and adding new books.
+            </p>
+            <ul>
+                <li>books.txt</li>
+            </ul>
+        </div>
+
+        
+        <!-- Task 2:  -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Task 2 - Pattern Generator and Analyzer</h3>
+            <a href="/static/task/Task_2.zip" download="Task_2.zip" class="btn-secondary">Download</a>
+            </div>
+
+            <p>
+                <b>Objective: </b>Create a Python program that generates and customizes patterns made up of stars (*) based on user-defined dimensions and rules.
+            </p>
+            <ul>
+                <li>None</li>
+            </ul>
+        </div>
+
+        
+        <!-- Task 3:  -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Task 3 - Warehouse Inventory Management System</h3>
+            <a href="/static/task/Task_3.zip" download="Task_3.zip" class="btn-secondary">Download</a>
+            </div>
+
+            <p>
+                <b>Objective: </b>Create a Python program to manage warehouse inventory by reading and updating data from a file. The program should allow users to interact with the inventory through various operations, ensuring data is consistently updated in the file.
+            </p>
+            <ul>
+                <li>inventory.txt</li>
+            </ul>
+        </div>
+
+        
+        <!-- Task 4:  -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Task 4 - Smart Parking Lot Management System</h3>
+            <a href="/static/task/Task_4.zip" download="Task_4.zip" class="btn-secondary">Download</a>
+            </div>
+
+            <p>
+                <b>Objective: </b>Create a Python program to manage a 5-level parking lot, where data about parking spots and their availability is read from and saved to a file. The program will assign parking spots, track vehicles, calculate charges, and dynamically update the parking lot status.
+            </p>
+            <ul>
+                <li>parking_lot.txt</li>
+            </ul>
+        </div>
+
+        
+        <!-- Task 5:  -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Task 5 - Chessboard Drawing with Turtle Graphics</h3>
+            <a href="/static/task/Task_5.zip" download="Task_5.zip" class="btn-secondary">Download</a>
+            </div>
+
+            <p>
+                <b>Objective: </b>Create a Python program using the turtle graphics module to draw a chessboard. The program should dynamically generate a black-and-white checkerboard pattern based on user input for the number of squares per row and column. The chessboard should have an alternating pattern of black and white squares.
+            </p>
+            <ul>
+                <li>None</li>
+            </ul>
+        </div>
+
+        
+        <!-- Task 6:  -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Task 6 - Perfect Number Finder</h3>
+            <a href="/static/task/Task_6.zip" download="Task_6.zip" class="btn-secondary">Download</a>
+            </div>
+
+            <p>
+                <b>Objective: </b>Create a Python program to efficiently find all perfect numbers below a user-specified limit. A perfect number is a positive integer that is equal to the sum of its proper divisors, excluding itself.
+            </p>
+            <ul>
+                <li>None</li>
+            </ul>
+        </div>
+
+        
+        
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

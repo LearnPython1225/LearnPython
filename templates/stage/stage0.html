@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content">Learning Content</a></li>
+                <li><a href="#community">Community</a></li>
+           
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Stage 0: Essential Skills for Additional Learning Materials</h1>
+            <p><b>Goal:</b> Develop essential Python skills, focusing on handling user input and reading files line by line to process and manage data effectively.</p>
+            <ul>
+                <li>User Input</li>
+                <li>File Reading</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>User Input</h3>
+            <a href="{{ url_for('learn2',chp='0.6') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b>Handling user input is essential for creating interactive applications. Python's `input()` function makes it easy to take input from users.
+            </p>
+            <ul>
+                <li>The `input()` function captures user input as a string.</li>
+                <li>Input can be converted to other types, like integers or floats, to perform calculations or comparisons.</li>
+                <li>Handling input is crucial for personalized user experiences in applications.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>File Reading</h3>
+            <a href="{{ url_for('learn2',chp='0.32') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Reading files is a common operation that involves opening a file to read its contents.
+            </p>
+            <ul>
+                <li>Python provides built-in functions like open() which can be used with the 'r' mode to read files.</li>
+                <li>The read(), readline(), and readlines() methods offer different ways to retrieve contents from a file.</li>
+                <li>Always ensure to close the file after reading or use a with statement to handle it automatically.</li>
+            </ul>
+        </div>
+
+        
+        
+
+
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

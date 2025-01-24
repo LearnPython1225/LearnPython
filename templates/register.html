@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h2>Register</h2>
+            <form id="registerForm" action="{{ url_for('register') }}" method="post">
+                <div class="input-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" name="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" name="password" placeholder="Enter 8-15 characters password" required>
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirm_password" placeholder="Confirm your password" required>
+                </div>
+                <button type="submit" class="btn-primary">Register</button>
+            </form>
+            <p class="terms">By registering, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</p>
+            <p class="login-link">Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</body>
+</html>

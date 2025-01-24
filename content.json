@@ -1,0 +1,534 @@
+{
+    "1.1": {
+        "title": "Print Statement",
+        "des": "The <tt>print()</tt> function is one of the most basic and frequently used functions in Python. It outputs information to the console and is essential for displaying messages, debugging, and user interaction.",
+        "keypoint1": "The <tt>print()</tt> function can display text, numbers, variables, or a combination of these.",
+        "keypoint2": "It automatically adds a newline after the output unless specified otherwise.",
+        "keypoint3": "-",
+        "example": "\n# Print a simple message\nprint(\"Hello, LearnPython!\")\n\n# Print numbers\nprint(123)\n\n# Print variables\nname = \"LearnPython\"\nprint(\"Welcome,\", name)\n\n# Customize output with 'end' and 'sep'\nprint(\"Python\", \"is\", \"fun\", sep=\"--\", end=\"!\\n\")",
+        "task1": "Task 1: Write a Python program that uses the <tt style='color:red;'>print()</tt> function to display the following text: <tt style='color:red;'>Hello, World!</tt> and <tt style='color:red;'>Welcome to Python programming.</tt> on separate lines.",
+        "task2": "Task 2: Write a Python program that displays the sentence <tt style='color:red;'>Learning, Python, is, fun!</tt> on a single line using the <tt style='color:red;'>print()</tt> function, with each word separated by a comma.",
+        "phases": "1"
+    },
+    "1.2": {
+        "title": "Variable Assignment",
+        "des": "Variables are containers for storing data values. Assigning variables in Python involves defining a variable name and setting it to a value.",
+        "keypoint1": "Variables can hold various types of data, such as strings, integers, floats, and booleans.",
+        "keypoint2": "Variable names are usually descriptive to make the code easier to understand.",
+        "keypoint3": "Variables can be modified after their initial assignment, and Python automatically keeps track of the variable type.",
+        "example": "\n# Assigning a string to a variable\nname = \"LearnPython\"\nprint(\"Welcome to\", name)\n\n# Assigning an integer to a variable\nage = 30\nprint(\"Age:\", age)\n\n# Assigning a float to a variable\nprice = 19.99\nprint(\"Price:\", price)\n\n# Assigning a boolean to a variable\nis_active = True\nprint(\"Active status:\", is_active)\n\n# Modifying a variable\nage = 31\nprint(\"Updated age:\", age)",
+        "task1": "Task 1: Create three variables: <tt style='color:red;'>name</tt>, <tt style='color:red;'>age</tt>, and <tt style='color:red;'>height</tt>. Assign them the values 'Alice', 25, and 5.5 respectively, and use the <tt style='color:red;'>print()</tt> function to display a message introducing Alice.",
+        "task2": "Task 2: Define a variable <tt style='color:red;'>greeting</tt> with the value 'Hello'. Reassign it to 'Hi' and then to 'Welcome'. Print the variable after each assignment to observe the changes..",
+        "phases": "1"
+    },
+    "1.3": {
+        "title": "Multiple Assignment",
+        "des": "Multiple assignments allow for assigning multiple variables at once in a single line, streamlining code and improving readability.",
+        "keypoint1": "Multiple variables can be assigned in one line, which simplifies the code.",
+        "keypoint2": "The values can be identical or different; Python handles both scenarios efficiently.",
+        "keypoint3": "This technique is especially useful for initializing multiple variables simultaneously.",
+        "example": "\n# Assigning multiple variables different values in one line\nx, y, z = 1, 2, 3\nprint(\"Values:\", x, y, z)\n\n# Assigning the same value to multiple variables in one line\na = b = c = \"Python\"\nprint(\"Languages:\", a, b, c)",
+        "task1": "Task 1: Write a Python program that uses multiple assignment to assign the values <tt style='color:red;'>10</tt>, <tt style='color:red;'>20</tt>, and <tt style='color:red;'>30</tt> to the variables <tt style='color:red;'>a</tt>, <tt style='color:red;'>b</tt>, and <tt style='color:red;'>c</tt> in a single line, and then print their values.",
+        "task2": "Task 2: Use multiple assignment to assign the value <tt style='color:red;'>Python</tt> to three variables <tt style='color:red;'>x</tt>, <tt style='color:red;'>y</tt>, and <tt style='color:red;'>z</tt>. Print each variable to confirm the assignment.",
+        "phases": "1"
+    },
+    "1.5": {
+        "title": "Type Casting",
+        "des": "Type casting in Python allows you to convert a variable from one type to another, which can be crucial for ensuring that operations on variables are possible.",
+        "keypoint1": "Type casting is used to convert variables to a different type to perform operations that require a specific type.",
+        "keypoint2": "Common type conversions are between integers, floats, and strings.",
+        "keypoint3": "This is necessary for operations like concatenating strings with numbers.",
+        "example": "\n# Converting an integer to a float\nnum_int = 5\nnum_float = float(num_int)\nprint(\"Float value:\", num_float)\n\n# Converting a float to an integer\nnum_float = 9.8\nnum_int = int(num_float)\nprint(\"Integer value:\", num_int)\n\n# Converting a number to a string\nnum = 10\nnum_str = str(num)\nprint(\"String value:\", num_str)\n\n# Concatenating a string and a number\nage = 25\nmessage = \"Your age is \" + str(age)\nprint(message)",
+        "task1": "Task 1: Write a Python program that converts an integer <tt style='color:red;'>10</tt> to a float and prints the result using the <tt style='color:red;'>float()</tt> function.",
+        "task2": "Task 2: Write a Python program that takes a float <tt style='color:red;'>9.8</tt>, converts it to an integer using the <tt style='color:red;'>int()</tt> function, and prints the result.",
+        "phases": "1"
+    },
+    "1.4": {
+        "title": "String Methods",
+        "des": "Python provides several built-in methods that can be used to manipulate strings, making text processing easier and more efficient.",
+        "keypoint1": "String methods can transform, search, and modify strings without changing the original string.",
+        "keypoint2": "Common methods include transforming case, finding substrings, and replacing characters.",
+        "keypoint3": "These methods are essential for data cleaning, formatting, and preparation.",
+        "example": "\ncountry = \"Malaysia\"\n\n# Display the length of the string\nprint(len(country))                # Length of the string\n\n# Convert all letters to uppercase\nprint(country.upper())             # Converts all letters to uppercase\n\n# Convert all letters to lowercase\nprint(country.lower())             # Converts all letters to lowercase\n\n# Count how many times 'A' appears\nprint(country.count('A'))          # Counts how many times 'A' appears\n\n# Find the index of the first occurrence of 'Y'\nprint(country.find('Y'))           # Index of the first occurrence of 'Y'\n\n# Capitalize the first letter\nprint(country.capitalize())        # Capitalizes the first letter\n\n# Check if the string contains only digits\nprint(country.isdigit())           # Checks if the string contains only digits\n\n# Check if the string contains only alphabetic characters\nprint(country.isalpha())           # Checks if the string contains only alphabetic characters\n\n# Replace 'Y' with 'Z'\nprint(country.replace('Y', 'Z'))   # Replaces 'Y' with 'Z'\n\n# Duplicate the string three times\nprint(country * 3)                 # Duplicates the string three times",
+        "task1": "Task 1: Write a Python program that takes the string <tt style='color:red;'>\"Hello, Python!\"</tt> and converts it to all uppercase letters using the <tt style='color:red;'>upper()</tt> method. Print the result.",
+        "task2": "Task 2: Write a Python program that uses the string <tt style='color:red;'>\"Hello, Python!\"</tt> and replaces <tt style='color:red;'>\"Python\"</tt> with <tt style='color:red;'>\"World\"</tt> using the <tt style='color:red;'>replace()</tt> method. Print the result.",
+        "phases": "1"
+    },
+    "1.8": {
+        "title": "String Slicing",
+        "des": "String slicing allows you to extract parts of strings in Python, which is useful for string manipulation and data processing.",
+        "keypoint1": "Slicing can be done with syntax like `string[start:stop:step]` to extract parts of a string.",
+        "keypoint2": "This feature is invaluable for tasks like data parsing, cleaning, and formatting.",
+        "keypoint3": "It also allows for reversing strings or extracting specific segments easily.",
+        "example": "\nexample_string = \"Hello, LearnPython!\"\n\n# Simple slicing to get a substring\nsubstring = example_string[7:16]\nprint(\"Substring (index 7 to 15):\", substring)\n\n# Slicing with a step, getting every second character in a range\nstep_slice = example_string[1:10:2]\nprint(\"Step slice (every second character from index 1 to 9):\", step_slice)\n\n# Negative indices to slice from the end\nnegative_indices_slice = example_string[-12:-6]\nprint(\"Negative indices slice (index -12 to -7):\", negative_indices_slice)\n\n# Omitting start and end to copy the string\nfull_slice = example_string[:]\nprint(\"Full slice (copy of the string):\", full_slice)\n\n# Using a negative step to reverse the string\nreversed_string = example_string[::-1]\nprint(\"Reversed string using negative step:\", reversed_string)",
+        "task1": "Task 1: Write a Python program that uses the string <tt style='color:red;'>\"LearnPython\"</tt> and extracts the substring <tt style='color:red;'>\"Learn\"</tt> using slicing. Print the result.",
+        "task2": "Task 2: Write a Python program that uses the string <tt style='color:red;'>\"LearnPython\"</tt> and reverses it using slicing. Print the result.",
+        "phases": "1"
+    },
+    "1.6": {
+        "title": "User Input",
+        "des": "Handling user input is essential for creating interactive applications. Python's `input()` function makes it easy to take input from users.",
+        "keypoint1": "The `input()` function captures user input as a string.",
+        "keypoint2": "Input can be converted to other types, like integers or floats, to perform calculations or comparisons.",
+        "keypoint3": "Handling input is crucial for personalized user experiences in applications.",
+        "example": "\nuser_name = input(\"Please enter your name: \")\nprint(\"Hello,\", user_name + \"!\")\n\nuser_age = int(input(\"Please enter your age: \"))\nprint(\"You are\", user_age, \"years old.\")\n\nuser_height = float(input(\"Enter your height in meters: \"))\nprint(\"Your height is\", user_height, \"meters.\")",
+        "task1": "Task 1: Write a Python program that asks the user to input their name using the <tt style='color:red;'>input()</tt> function and then prints a greeting message, e.g., <tt style='color:red;'>\"Hello, [Name]!\"</tt>.",
+        "task2": "Task 2: Write a Python program that prompts the user to enter their age using the <tt style='color:red;'>input()</tt> function, converts it to an integer using <tt style='color:red;'>int()</tt>, and prints a message stating their age.",
+        "phases": "1"
+    },
+    "1.7": {
+        "title": "Math Functions",
+        "des": "Python's math module provides access to various mathematical functions, which are crucial for scientific computing.",
+        "keypoint1": "Functions like `round()`, `max()`, `min()`, and mathematical constants like `pi` are available.",
+        "keypoint2": "These functions help perform complex mathematical calculations easily.",
+        "keypoint3": "Utilizing these functions can greatly enhance the functionality of a Python program.",
+        "example": "\nimport math\n\n# Define some sample numbers\nradius = 3.14\na = 1\nb = 2\nc = 3\n\n# Find the maximum of three values\nlargest = max(a, b, c)\n\n# Demonstrating various math functions\nprint(\"Rounded 1.5 (round up on .5):\", round(1.5))  # Rounding to the nearest integer\nprint(\"Ceiling of radius (smallest integer >= radius):\", math.ceil(radius))  # Ceiling function\nprint(\"Floor of radius (largest integer <= radius):\", math.floor(radius))  # Floor function\nprint(\"Absolute value of radius:\", abs(radius))  # Absolute value\nprint(\"Radius squared (radius^2):\", pow(radius, 2))  # Power function\nprint(\"Square root of radius:\", math.sqrt(radius))  # Square root\nprint(\"Maximum of a, b, c:\", max(a, b, c))  # Maximum of given values\nprint(\"Minimum of a, b, c:\", min(a, b, c))  # Minimum of given values",
+        "task1": "Task 1: Write a Python program that calculates the square root of <tt style='color:red;'>16</tt> using the <tt style='color:red;'>math.sqrt()</tt> function and prints the result.",
+        "task2": "Task 2: Write a Python program that finds the maximum value among <tt style='color:red;'>10</tt>, <tt style='color:red;'>20</tt>, and <tt style='color:red;'>30</tt> using the <tt style='color:red;'>max()</tt> function and prints the result.",
+        "phases": "1"
+    },
+
+
+
+    "2.9": {
+        "title": "If Statement",
+        "des": "An if statement allows for conditional execution of code segments based on the truth value of an expression.",
+        "keypoint1": "Executes a block of code if its condition is true.",
+        "keypoint2": "Can be combined with 'elif' and 'else' for multiple conditions.",
+        "keypoint3": "Helps in decision making by directing the flow of execution.",
+        "example": "\n# Define a variable to check\ntemperature = 25\n\n# Conditional execution with if, elif, and else\nif temperature > 30:\n    print(\"It's a hot day. Stay hydrated!\")\nelif 20 <= temperature <= 30:\n    print(\"The weather is pleasant today.\")\nelse:\n    print(\"It's quite cool outside. Wear a jacket.\")\n\n# Simple condition\nage = 18\nif age >= 18:\n    print(\"You are eligible to vote.\")\n\n# Nested if statements\nscore = 85\nif score >= 60:\n    if score >= 90:\n        print(\"Excellent performance!\")\n    elif score >= 75:\n        print(\"Good job!\")\n    else:\n        print(\"You passed, but there's room for improvement.\")\nelse:\n    print(\"Unfortunately, you failed. Better luck next time.\")",
+        "task1": "Task 1: Write a Python program that checks whether a variable <tt style='color:red;'>temperature = 18</tt> is less than <tt style='color:red;'>20</tt>. If true, print <tt style='color:red;'>\"It's cold outside.\"</tt>; otherwise, print <tt style='color:red;'>\"The weather is fine.\"</tt>.",
+        "task2": "Task 2: Write a Python program that checks the value of a variable <tt style='color:red;'>age = 65</tt>. Use <tt style='color:red;'>if</tt>, <tt style='color:red;'>elif</tt>, and <tt style='color:red;'>else</tt> to print one of the following messages: <tt style='color:red;'>\"Child\"</tt> for ages below 18, <tt style='color:red;'>\"Adult\"</tt> for ages between 18 and 64, and <tt style='color:red;'>\"Senior\"</tt> for ages 65 and above.",
+        "phases": "2"
+    },
+    "2.10": {
+        "title": "Logical Operators",
+        "des": "Logical operators allow combining multiple conditions. They are fundamental in developing complex logical expressions.",
+        "keypoint1": "'and' checks if both conditions are true.",
+        "keypoint2": "'or' checks if at least one condition is true.",
+        "keypoint3": "'not' inverts the truth value of the condition.",
+        "example": "\n# Using 'and' to check if both conditions are true\nage = 25\nincome = 4000\nif age > 18 and income > 3000:\n    print(\"You are eligible for a premium credit card.\")\n\n# Using 'or' to check if at least one condition is true\ntemperature = 35\nis_raining = False\nif temperature > 30 or is_raining:\n    print(\"You might want to stay indoors.\")\n\n# Using 'not' to invert a condition\nis_logged_in = False\nif not is_logged_in:\n    print(\"Please log in to continue.\")\n\n# Combining 'and', 'or', and 'not' in a complex condition\nis_student = True\nhas_discount_card = False\nif (is_student or has_discount_card) and not is_logged_in:\n    print(\"You qualify for a discount, but you need to log in first.\")",
+        "task1": "Task 1: Write a Python program that checks if a variable <tt style='color:red;'>x = 10</tt> is greater than <tt style='color:red;'>5</tt> and less than <tt style='color:red;'>20</tt> using the <tt style='color:red;'>and</tt> operator. If true, print <tt style='color:red;'>\"x is within range.\"</tt>; otherwise, print <tt style='color:red;'>\"x is out of range.\"</tt>.",
+        "task2": "Task 2: Write a Python program that evaluates two variables: <tt style='color:red;'>is_raining = True</tt> and <tt style='color:red;'>temperature = 25</tt>. Use <tt style='color:red;'>and</tt>, <tt style='color:red;'>or</tt>, and <tt style='color:red;'>not</tt> operators to print one of the following messages: <tt style='color:red;'>\"Stay indoors.\"</tt> if it's raining or the temperature is below <tt style='color:red;'>15</tt>; <tt style='color:red;'>\"Go for a walk.\"</tt> if it's not raining and the temperature is above <tt style='color:red;'>15</tt>.",
+        "phases": "2"
+    },
+    "2.11": {
+        "title": "While Loop",
+        "des": "A while loop continues to execute a block of code as long as the condition remains true.",
+        "keypoint1": "Executes repeatedly based on a given Boolean condition.",
+        "keypoint2": "Useful for tasks that require repetition until a condition changes.",
+        "keypoint3": "Must ensure the loop has a breaking condition to prevent infinite loops.",
+        "example": "\n# Example 1: Simple counting\ncounter = 1\nwhile counter <= 5:\n    print(\"Counter:\", counter)\n    counter = counter + 1  # Increment to avoid an infinite loop\n\n# Example 2: Repeating a message\nrepeat = 0\nwhile repeat < 3:\n    print(\"This is a while loop!\")\n    repeat = repeat + 1",
+        "task1": "Task 1: Write a Python program that initializes a variable <tt style='color:red;'>counter = 1</tt> and uses a <tt style='color:red;'>while</tt> loop to print the numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>5</tt>.",
+        "task2": "Task 2: Write a Python program that simulates a countdown from <tt style='color:red;'>10</tt> to <tt style='color:red;'>1</tt> using a <tt style='color:red;'>while</tt> loop. At the end of the countdown, print <tt style='color:red;'>\"Happy New Year!\"</tt>. Ensure the program includes a condition to avoid infinite loops.",
+        "phases": "2"
+    },
+    "2.12": {
+        "title": "For Loops",
+        "des": "For loops are used to iterate over a sequence (such as a list, tuple, dictionary, or string) or other iterable objects.",
+        "keypoint1": "Iterates over elements of a sequence, executing the block each time.",
+        "keypoint2": "Commonly used for looping through ranges, lists, or strings.",
+        "keypoint3": "Provides a simple way to loop a fixed number of times through a sequence.",
+        "example": "\n# Example 1: Looping through a list\nfruits = [\"apple\", \"banana\", \"cherry\"]\nfor fruit in fruits:\n    print(\"Fruit:\", fruit)\n\n# Example 2: Looping through a string\nword = \"Python\"\nfor letter in word:\n    print(\"Letter:\", letter)\n\n# Example 3: Looping through a range of numbers\nfor number in range(6):  # Numbers from 0 to 5\n    print(\"Number:\", number)",
+        "task1": "Task 1: Write a Python program that uses a <tt style='color:red;'>for</tt> loop to iterate over a list of fruits: <tt style='color:red;'>[\"apple\", \"banana\", \"cherry\"]</tt>, and prints each fruit with the message <tt style='color:red;'>\"I like [fruit]!\"</tt>.",
+        "task2": "Task 2: Write a Python program that uses a <tt style='color:red;'>for</tt> loop with <tt style='color:red;'>range()</tt> to print the square of each number from <tt style='color:red;'>1</tt> to <tt style='color:red;'>10</tt>. The output should be formatted as <tt style='color:red;'>\"The square of [number] is [result].\"</tt>",
+        "phases": "2"
+    },
+    "2.13": {
+        "title": "Nested Loops",
+        "des": "Nested loops involve a loop inside another loop, useful for performing operations on multi-dimensional data structures.",
+        "keypoint1": "The inner loop completes all its iterations for each single iteration of the outer loop.",
+        "keypoint2": "Commonly used in algorithms that require a pair of elements.",
+        "keypoint3": "Efficient for tasks that require comparing elements in two different lists or arrays.",
+        "example": "\n# Example 1: Nested loops to create a multiplication table\nprint(\"Multiplication Table:\")\nfor i in range(1, 4):  # Outer loop for rows\n    for j in range(1, 4):  # Inner loop for columns\n        print(i * j, end=\" \")  # Multiplying row by column\n    print()  # Move to the next line after inner loop\n\n# Example 2: Comparing elements from two lists\nlist1 = [1, 2, 3]\nlist2 = [\"A\", \"B\", \"C\"]\nprint(\"\\nPairs:\")\nfor num in list1:  # Outer loop iterates over list1\n    for letter in list2:  # Inner loop iterates over list2\n        print(f\"({num}, {letter})\")",
+        "task1": "Task 1: Write a Python program that uses nested <tt style='color:red;'>for</tt> loops to print a grid of <tt style='color:red;'>*</tt> symbols with <tt style='color:red;'>4</tt> rows and <tt style='color:red;'>5</tt> columns.",
+        "task2": "Task 2: Write a Python program that uses nested <tt style='color:red;'>for</tt> loops to create a multiplication table for numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>5</tt>. Each row should represent the products of one number multiplied by all numbers in the range.",
+        "phases": "2"
+    },
+    "2.14": {
+        "title": "Break, Continue, Pass",
+        "des": "Loop control statements like break, continue, and pass alter the behavior of conditionals and loops.",
+        "keypoint1": "'break' exits out of the enclosing loop.",
+        "keypoint2": "'continue' skips the current iteration of the loop and continues with the next.",
+        "keypoint3": "'pass' acts as a placeholder and does nothing, used when syntax requires a statement but no action is needed.",
+        "example": "\n# Example 1: Using 'break' to exit a loop\nprint(\"Break example:\")\nfor number in range(1, 10):\n    if number == 5:\n        print(\"Breaking the loop at:\", number)\n        break  # Exit the loop\n    print(\"Number:\", number)\n\n# Example 2: Using 'continue' to skip an iteration\nprint(\"\\nContinue example:\")\nfor number in range(1, 10):\n    if number % 2 == 0:\n        continue  # Skip even numbers\n    print(\"Odd number:\", number)\n\n# Example 3: Using 'pass' as a placeholder\nprint(\"\\nPass example:\")\nfor number in range(1, 5):\n    if number == 3:\n        pass  # Do nothing here\n    else:\n        print(\"Number:\", number)",
+        "task1": "Task 1: Write a Python program that uses a <tt style='color:red;'>for</tt> loop to iterate through numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>10</tt>. Use the <tt style='color:red;'>break</tt> statement to exit the loop when the number <tt style='color:red;'>5</tt> is reached, and print the numbers before breaking.",
+        "task2": "Task 2: Write a Python program that uses a <tt style='color:red;'>for</tt> loop to iterate through numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>10</tt>. Use the <tt style='color:red;'>continue</tt> statement to skip even numbers and print only the odd numbers. Include the <tt style='color:red;'>pass</tt> statement in the loop to demonstrate its usage as a placeholder.",
+        "phases": "2"
+    },
+    "2.30": {
+        "title": "Exception Handling",
+        "des": "Exception handling in Python involves using 'try' and 'except' blocks to catch exceptions, ensuring the program can handle errors gracefully without crashing.",
+        "keypoint1": "The 'try' block lets you test a block of code for errors.",
+        "keypoint2": "The 'except' block lets you handle the error with a custom response.",
+        "keypoint3": "'finally' code block will execute regardless of the result of the try- and except blocks.",
+        "example": "\n# Example 1: Basic try and except\nnumber = \"abc\"  # A non-integer value to simulate an error\ntry:\n    converted_number = int(number)\n    print(\"Converted number:\", converted_number)\nexcept ValueError as e:\n    print(f\"Error occurred: {e}\")\n\n# Example 2: Handling multiple exceptions\ndivisor = 0  # Set to 0 to simulate a ZeroDivisionError\ntry:\n    result = 10 / divisor\n    print(\"Result:\", result)\nexcept ZeroDivisionError as e:\n    print(f\"Error occurred: {e}\")\nexcept ValueError as e:\n    print(f\"Error occurred: {e}\")\n\n# Example 3: Using finally for cleanup\ntry:\n    numbers = [1, 2, 3]\n    print(numbers[5])  # This will cause an IndexError\nexcept IndexError as e:\n    print(f\"Error occurred: {e}\")\nfinally:\n    print(\"Execution completed.\")",
+        "task1": "Task 1: Write a Python program that tries to divide <tt style='color:red;'>10</tt> by <tt style='color:red;'>2</tt> using a <tt style='color:red;'>try</tt> block. If an exception occurs, handle it with an <tt style='color:red;'>except</tt> block that prints an error message.",
+        "task2": "Task 2: Write a Python program that attempts to access the <tt style='color:red;'>5th</tt> element of a list <tt style='color:red;'>[1, 2, 3]</tt> using a <tt style='color:red;'>try</tt> block. Handle both <tt style='color:red;'>IndexError</tt> and <tt style='color:red;'>TypeError</tt> exceptions separately, and print appropriate error messages.",
+        "phases": "2"
+    },
+
+
+
+    "3.15": {
+        "title": "Lists",
+        "des": "Lists are used to store multiple items in a single variable, making them one of Python's most versatile data types.",
+        "keypoint1": "Lists are mutable, allowing the modification of their elements.",
+        "keypoint2": "Lists support various methods such as append(), remove(), pop(), and more for manipulating contents.",
+        "keypoint3": "They can include elements of different types, even other lists.",
+        "example": "\n# Example 1: Creating and accessing a list\nfruits = [\"apple\", \"banana\", \"cherry\"]\nprint(\"List of fruits:\", fruits)\nprint(\"First fruit:\", fruits[0])  # Accessing the first element\nprint(\"Last fruit:\", fruits[-1])  # Accessing the last element\n\n# Example 2: Modifying a list\nfruits[1] = \"blueberry\"  # Changing the second element\nprint(\"Modified list:\", fruits)\n\n# Example 3: Adding and removing elements\nfruits.append(\"orange\")  # Adding an element to the end\nprint(\"After append:\", fruits)\nfruits.remove(\"apple\")  # Removing a specific element\nprint(\"After remove:\", fruits)\npopped_fruit = fruits.pop()  # Removing the last element\nprint(\"Popped fruit:\", popped_fruit)\nprint(\"After pop:\", fruits)\n\n# Example 4: Combining lists\nvegetables = [\"carrot\", \"potato\"]\nall_items = fruits + vegetables  # Combining two lists\nprint(\"Combined list:\", all_items)",
+        "task1": "Task 1: Write a Python program to create a list of integers <tt style='color:red;'>[3, 6, 9, 12, 15]</tt>. Add the number <tt style='color:red;'>18</tt> to the end of the list and remove the number <tt style='color:red;'>6</tt>. Print the updated list.",
+        "task2": "Task 2: Write a Python program that creates a list of fruits <tt style='color:red;'>[\"apple\", \"banana\", \"cherry\", \"date\"]</tt>. Reverse the order of the list, remove the last item, and add a new fruit <tt style='color:red;'>\"grape\"</tt> at the beginning. Print the modified list.",
+        "phases": "3"
+    },
+    "3.16": {
+        "title": "2D Lists",
+        "des": "2D lists are lists of lists, often used to store complex data structures like matrices.",
+        "keypoint1": "2D lists are accessed using two indices [i][j].",
+        "keypoint2": "They are useful for applications such as game boards, spreadsheets, and more.",
+        "keypoint3": "Manipulating 2D lists involves nested loops for rows and columns.",
+        "example": "\n# Example 1: Creating and accessing a 2D list\nmatrix = [\n    [1, 2, 3],\n    [4, 5, 6],\n    [7, 8, 9]\n]\nprint(\"Matrix:\", matrix)\nprint(\"First row:\", matrix[0])  # Accessing the first row\nprint(\"Element at row 2, column 3:\", matrix[1][2])  # Accessing a specific element\n\n# Example 2: Modifying a 2D list\nmatrix[0][1] = 99  # Changing the second element of the first row\nprint(\"Modified Matrix:\", matrix)\n\n# Example 3: Iterating through a 2D list\nprint(\"Matrix elements:\")\nfor row in matrix:  # Loop through rows\n    for element in row:  # Loop through each element in the row\n        print(element, end=\" \")\n    print()  # Move to the next line after each row",
+        "task1": "Task 1: Write a Python program that creates a 2D list representing a tic-tac-toe board: <tt style='color:red;'>[['X', 'O', 'X'], ['O', 'X', 'O'], ['O', 'X', 'O']]</tt>. Access and print the element in the second row and third column.",
+        "task2": "Task 2: Write a Python program that creates a 2D list representing a 3x3 grid of numbers starting from 1. Update the middle element to <tt style='color:red;'>0</tt> and use nested loops to print each row in the grid.",
+        "phases": "3"
+    },
+    "3.17": {
+        "title": "Tuples",
+        "des": "Tuples are immutable collections, which means they cannot be altered once created.",
+        "keypoint1": "Tuples are defined by enclosing the elements in parentheses.",
+        "keypoint2": "They are suitable for storing data that should not change, such as coordinates or dates.",
+        "keypoint3": "Tuples support operations like indexing and slicing but do not support methods like append() or remove().",
+        "example": "\n# Example 1: Creating and accessing a tuple\ncoordinates = (10, 20, 30)\nprint(\"Coordinates tuple:\", coordinates)\nprint(\"First element:\", coordinates[0])  # Accessing the first element\nprint(\"Last element:\", coordinates[-1])  # Accessing the last element\n\n# Example 2: Slicing a tuple\nprint(\"Slice of coordinates (first two elements):\", coordinates[:2])\n\n# Example 3: Tuples with mixed data types\nperson = (\"Alice\", 25, \"Engineer\")\nprint(\"Person tuple:\", person)\nprint(\"Name:\", person[0])\nprint(\"Age:\", person[1])\n\n# Example 4: Iterating through a tuple\nprint(\"Coordinates:\")\nfor value in coordinates:\n    print(value)\n\n# Example 5: Immutable property\ntry:\n    coordinates[0] = 100  # Attempting to modify a tuple element\nexcept TypeError as e:\n    print(\"Error:\", e)",
+        "task1": "Task 1: Write a Python program to create a tuple <tt style='color:red;'>(10, 20, 30, 40)</tt>. Access and print the second element of the tuple.",
+        "task2": "Task 2: Write a Python program to create two tuples: <tt style='color:red;'>(1, 2, 3)</tt> and <tt style='color:red;'>(4, 5, 6)</tt>. Concatenate them into a new tuple and print the result. Then, access and print the last three elements of the concatenated tuple.",
+        "phases": "3"
+    },
+    "3.18": {
+        "title": "Sets",
+        "des": "Sets are collections of unique elements, useful for operations involving uniqueness and order does not matter.",
+        "keypoint1": "Sets automatically remove duplicate items.",
+        "keypoint2": "They provide efficient ways to perform set operations like union, intersection, and difference.",
+        "keypoint3": "Sets are mutable but do not allow mutable items like lists as elements.",
+        "example": "\n# Example 1: Creating and displaying a set\nfruits = {\"apple\", \"banana\", \"cherry\", \"apple\"}  # Duplicate \"apple\" will be removed\nprint(\"Unique fruits:\", fruits)\n\n# Example 2: Adding and removing elements\nfruits.add(\"orange\")  # Adding a new element\nprint(\"After adding orange:\", fruits)\nfruits.remove(\"banana\")  # Removing an element\nprint(\"After removing banana:\", fruits)\n\n# Example 3: Set operations\nset_a = {1, 2, 3}\nset_b = {3, 4, 5}\nprint(\"Union of sets:\", set_a | set_b)  # Union\nprint(\"Intersection of sets:\", set_a & set_b)  # Intersection\nprint(\"Difference of sets (A - B):\", set_a - set_b)  # Difference\nprint(\"Symmetric difference of sets:\", set_a ^ set_b)  # Elements in A or B but not both\n\n# Example 4: Checking membership\nprint(\"Is 'apple' in fruits?\", \"apple\" in fruits)\nprint(\"Is 'banana' in fruits?\", \"banana\" in fruits)\n\n# Example 5: Iterating through a set\nprint(\"Fruits in the set:\")\nfor fruit in fruits:\n    print(fruit)",
+        "task1": "Task 1: Write a Python program to create a set <tt style='color:red;'>{\"apple\", \"banana\", \"cherry\"}</tt>. Add the element <tt style='color:red;'>\"orange\"</tt> to the set and remove <tt style='color:red;'>\"banana\"</tt>. Print the updated set.",
+        "task2": "Task 2: Write a Python program to create two sets: <tt style='color:red;'>{1, 2, 3, 4}</tt> and <tt style='color:red;'>{3, 4, 5, 6}</tt>. Find and print their intersection, union, and symmetric difference.",
+        "phases": "3"
+    },
+    "3.19": {
+        "title": "Dictionary",
+        "des": "Dictionaries are collections of key:value pairs that are unordered, changeable, and indexed by keys.",
+        "keypoint1": "Dictionaries allow fast data access via keys, which need to be unique.",
+        "keypoint2": "They can store any type of object in Python as values.",
+        "keypoint3": "Dictionaries are dynamic and can have items added or removed.",
+        "example": "\n# Example 1: Creating and accessing a dictionary\nperson = {\n    \"name\": \"Alice\",\n    \"age\": 25,\n    \"profession\": \"Engineer\"\n}\nprint(\"Person dictionary:\", person)\nprint(\"Name:\", person[\"name\"])  # Accessing a value by its key\nprint(\"Age:\", person[\"age\"])\n\n# Example 2: Adding and updating key-value pairs\nperson[\"city\"] = \"New York\"  # Adding a new key-value pair\nperson[\"age\"] = 26  # Updating an existing key's value\nprint(\"Updated dictionary:\", person)\n\n# Example 3: Removing key-value pairs\nremoved_value = person.pop(\"profession\")  # Removing a key-value pair\nprint(\"Removed profession:\", removed_value)\nprint(\"After removal:\", person)\n\n# Example 4: Iterating through a dictionary\nprint(\"Keys and values:\")\nfor key, value in person.items():\n    print(f\"{key}: {value}\")\n\n# Example 5: Checking membership\nprint(\"Is 'name' a key in person?\", \"name\" in person)\nprint(\"Is 'Engineer' a value in person?\", \"Engineer\" in person.values())",
+        "task1": "Task 1: Write a Python program to create a dictionary <tt style='color:red;'>{\"name\": \"Alice\", \"age\": 25, \"city\": \"New York\"}</tt>. Add a new key-value pair <tt style='color:red;'>\"profession\": \"Engineer\"</tt> and update the value of <tt style='color:red;'>\"age\"</tt> to <tt style='color:red;'>26</tt>. Print the updated dictionary.",
+        "task2": "Task 2: Write a Python program to create a dictionary <tt style='color:red;'>{\"A\": 1, \"B\": 2, \"C\": 3}</tt>. Use a loop to multiply all the values by <tt style='color:red;'>2</tt> and print the modified dictionary.",
+        "phases": "3"
+    },
+    "3.20": {
+        "title": "Indexing",
+        "des": "Indexing allows you to access individual elements of a sequence directly by their position.",
+        "keypoint1": "Works with strings, lists, tuples, and other sequence types.",
+        "keypoint2": "Python uses zero-based indexing.",
+        "keypoint3": "Supports negative indexing to access elements from the end of the sequence.",
+        "example": "\n# Example 1: Indexing in a string\nword = \"Python\"\nprint(\"Word:\", word)\nprint(\"First character:\", word[0])  # Accessing the first character\nprint(\"Last character:\", word[-1])  # Accessing the last character\nprint(\"Second to fourth characters:\", word[1:4])  # Accessing a slice\n\n# Example 2: Indexing in a list\nnumbers = [10, 20, 30, 40, 50]\nprint(\"\\nNumbers list:\", numbers)\nprint(\"First element:\", numbers[0])  # Accessing the first element\nprint(\"Last element:\", numbers[-1])  # Accessing the last element\nprint(\"Second to fourth elements:\", numbers[1:4])  # Accessing a slice\n\n# Example 3: Indexing in a tuple\ncoordinates = (5, 10, 15, 20)\nprint(\"\\nCoordinates tuple:\", coordinates)\nprint(\"First value:\", coordinates[0])  # Accessing the first element\nprint(\"Third value:\", coordinates[2])  # Accessing the third element",
+        "task1": "Task 1: Write a Python program to create a list <tt style='color:red;'>[10, 20, 30, 40, 50]</tt>. Access and print the first, third, and last elements using indexing.",
+        "task2": "Task 2: Write a Python program to create a string <tt style='color:red;'>\"PythonProgramming\"</tt>. Use slicing to extract and print the substring <tt style='color:red;'>\"Programming\"</tt>, and reverse the entire string using negative indexing.",
+        "phases": "3"
+    },
+    "3.28": {
+        "title": "String Formatting",
+        "des": "String formatting provides multiple ways to format strings in Python, making it easier to create structured outputs.",
+        "keypoint1": "The str.format() method inserts values into a string's placeholder.",
+        "keypoint2": "Supports reordering, alignment, and formatting types within placeholders.",
+        "keypoint3": "Enhances the readability and flexibility of output strings.",
+        "example": "\n# Example 1: Basic string formatting\nname = \"Alice\"\nage = 25\nprint(\"My name is {} and I am {} years old.\".format(name, age))\n\n# Example 2: Reordering placeholders\nfirst = \"Python\"\nsecond = \"fun\"\nprint(\"Learning {1} with {0} is great!\".format(first, second))\n\n# Example 3: Formatting numbers\npi = 3.14159\nprint(\"The value of pi is approximately {:.2f}.\".format(pi))  # Two decimal places\n\n# Example 4: Alignment in placeholders\nprint(\"{:<10} | {:^10} | {:>10}\".format(\"Left\", \"Center\", \"Right\"))  # Align text\nprint(\"{:<10} | {:^10} | {:>10}\".format(1, 2, 3))  # Align numbers\n\n# Example 5: Using named placeholders\nprint(\"Coordinates: Latitude={lat}, Longitude={lon}\".format(lat=37.7749, lon=-122.4194))",
+        "task1": "Task 1: Write a Python program to format a string using <tt style='color:red;'>str.format()</tt>. Use variables <tt style='color:red;'>name = \"Alice\"</tt> and <tt style='color:red;'>age = 30</tt> to print the sentence: <tt style='color:red;'>\"My name is Alice and I am 30 years old.\"</tt>",
+        "task2": "Task 2: Write a Python program to display the table headers <tt style='color:red;'>\"Name\"</tt>, <tt style='color:red;'>\"Age\"</tt>, and <tt style='color:red;'>\"City\"</tt> aligned to the left, center, and right respectively using <tt style='color:red;'>str.format()</tt>. Then, format and display the data <tt style='color:red;'>\"Bob, 25, Boston\"</tt> under these headers with the same alignment.",
+        "phases": "3"
+    },
+    "3.29": {
+        "title": "Random Numbers",
+        "des": "The random module in Python provides a suite of functions that support generating random numbers and choosing random items.",
+        "keypoint1": "randint() generates a random integer within a specified range.",
+        "keypoint2": "random() generates a random float number between 0 and 1.",
+        "keypoint3": "shuffle() randomly reorders the elements in a list.",
+        "example": "\nimport random\n\n# Example 1: Generating a random integer within a range\nrandom_int = random.randint(1, 10)  # Random integer between 1 and 10 (inclusive)\nprint(\"Random integer:\", random_int)\n\n# Example 2: Generating a random float between 0 and 1\nrandom_float = random.random()  # Random float between 0 and 1\nprint(\"Random float:\", random_float)\n\n# Example 3: Shuffling a list\nnumbers = [1, 2, 3, 4, 5]\nrandom.shuffle(numbers)  # Shuffle the list in place\nprint(\"Shuffled list:\", numbers)\n\n# Example 4: Choosing a random element from a list\nfruits = [\"apple\", \"banana\", \"cherry\", \"date\"]\nrandom_choice = random.choice(fruits)  # Select a random item from the list\nprint(\"Random choice:\", random_choice)",
+        "task1": "Task 1: Write a Python program to generate a random float between <tt style='color:red;'>0</tt> and <tt style='color:red;'>1</tt> using <tt style='color:red;'>random.random()</tt>. Print the result.",
+        "task2": "Task 2: Write a Python program to create a list of numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>10</tt>. Randomly pick <tt style='color:red;'>3</tt> unique numbers from the list using <tt style='color:red;'>random.sample()</tt> and print the selected numbers.",
+        "phases": "3"
+    },
+
+
+
+    "4.21": {
+        "title": "Functions",
+        "des": "Functions are reusable blocks of code that perform a specific task and are executed when called.",
+        "keypoint1": "Functions are defined using the 'def' keyword followed by a name and parentheses which can contain parameters.",
+        "keypoint2": "Functions improve code reusability and make the code organized and manageable.",
+        "keypoint3": "They can take parameters to receive input values and can call other functions within them.",
+        "example": "\n# Example 1: Defining and calling a simple function\ndef greet():\n    print(\"Hello! Welcome to Python functions.\")\n\ngreet()  # Calling the function\n\n# Example 2: Function with parameters\ndef greet_person(name):\n    print(f\"Hello, {name}! Welcome to Python functions.\")\n\ngreet_person(\"Alice\")  # Calling the function with an argument\n\n# Example 3: Function demonstrating multiple parameters\ndef add_numbers(a, b):\n    print(f\"The sum of {a} and {b} is {a + b}.\")\n\nadd_numbers(5, 3)  # Providing two arguments",
+        "task1": "Task 1: Write a Python function named <tt style='color:red;'>greet()</tt> that prints <tt style='color:red;'>\"Hello, welcome to Python programming!\"</tt>. Call the function to display the message.",
+        "task2": "Task 2: Write a Python function named <tt style='color:red;'>calculate_area()</tt> that takes two parameters, <tt style='color:red;'>length</tt> and <tt style='color:red;'>width</tt>, calculates the area of a rectangle, and returns the result. Call the function with <tt style='color:red;'>length = 5</tt> and <tt style='color:red;'>width = 10</tt>, and print the returned value.",
+        "phases": "4"
+    },
+    "4.22": {
+        "title": "Return Statement",
+        "des": "The return statement in a function sends a result back to the caller and exits the function.",
+        "keypoint1": "Functions can return a value that can be used later in the program.",
+        "keypoint2": "Without a return statement, a function will return None by default.",
+        "keypoint3": "Return statements can be used to return multiple values from a function using tuples.",
+        "example": "\n# Example 1: Returning a single value\ndef square(number):\n    return number * number\n\nresult = square(4)\nprint(\"Square of 4:\", result)\n\n# Example 2: Default return value\ndef greet():\n    print(\"Hello!\")\n\nresult = greet()  # No explicit return\nprint(\"Default return value:\", result)  # This will print 'None'\n\n# Example 3: Returning multiple values\ndef get_coordinates():\n    return (10, 20)  # Returning a tuple with two values\n\ncoordinates = get_coordinates()\nprint(\"Coordinates:\", coordinates)",
+        "task1": "Task 1: Write a Python function named <tt style='color:red;'>square()</tt> that takes one parameter <tt style='color:red;'>x</tt>, calculates its square, and returns the result. Call the function with <tt style='color:red;'>x = 4</tt> and print the returned value.",
+        "task2": "Task 2: Write a Python function named <tt style='color:red;'>calculate_circle()</tt> that takes one parameter <tt style='color:red;'>radius</tt>, calculates and returns both the area and circumference of a circle as a tuple. Use <tt style='color:red;'>radius = 7</tt> and print the returned values.",
+        "phases": "4"
+    },
+    "4.23": {
+        "title": "Keyword Arguments",
+        "des": "Keyword arguments allow you to pass arguments to a function with a keyword so order does not matter.",
+        "keypoint1": "Keyword arguments are passed by explicitly identifying the parameters by their names in the function call.",
+        "keypoint2": "They improve the readability of function calls by specifying what each argument represents.",
+        "keypoint3": "Default values can be assigned to function parameters to make them optional during a function call.",
+        "example": "\n# Example 1: Using keyword arguments\ndef introduce(name, age, city):\n    print(f\"My name is {name}, I am {age} years old, and I live in {city}.\")\n\nintroduce(name=\"Alice\", age=25, city=\"New York\")  # Using keyword arguments\n\n# Example 2: Changing the order with keyword arguments\nintroduce(city=\"Los Angeles\", age=30, name=\"Bob\")  # The order of arguments doesn't matter\n\n# Example 3: Combining positional and keyword arguments\ndef describe_animal(name, species=\"dog\"):\n    print(f\"The animal is a {species} named {name}.\")\n\ndescribe_animal(\"Buddy\")  # Using the default value for species\ndescribe_animal(\"Milo\", species=\"cat\")  # Overriding the default value",
+        "task1": "Task 1: Write a Python function named <tt style='color:red;'>introduce()</tt> that accepts three keyword arguments: <tt style='color:red;'>name</tt>, <tt style='color:red;'>age</tt>, and <tt style='color:red;'>city</tt>. The function should print a formatted message introducing the person. Call the function with <tt style='color:red;'>name=\"Alice\"</tt>, <tt style='color:red;'>age=30</tt>, and <tt style='color:red;'>city=\"New York\"</tt>.",
+        "task2": "Task 2: Write a Python function named <tt style='color:red;'>describe_book()</tt> that takes one required argument <tt style='color:red;'>title</tt> and two optional keyword arguments: <tt style='color:red;'>author</tt> and <tt style='color:red;'>year</tt>. If <tt style='color:red;'>author</tt> or <tt style='color:red;'>year</tt> is not provided, they should default to <tt style='color:red;'>\"Unknown\"</tt>. Call the function with different combinations of arguments and print the descriptions.",
+        "phases": "4"
+    },
+    "4.24": {
+        "title": "Nested Function Calls",
+        "des": "Nested function calls involve calling one function inside another in a single statement.",
+        "keypoint1": "The innermost function call is executed first; its return value is passed up to the next outer function.",
+        "keypoint2": "This technique is often used for processing data before passing it to another function.",
+        "keypoint3": "It can be used to create concise code but may sacrifice readability if overused.",
+        "example": "\n# Example 1: Basic nested function calls\ndef double(number):\n    return number * 2\n\ndef add_five(number):\n    return number + 5\n\n# Nested call: double the result of add_five\nresult = double(add_five(3))\nprint(\"Result of nested function call:\", result)\n\n# Example 2: Using built-in functions in a nested call\nnumbers = [4, 7, 2, 9]\nlargest = max(sorted(numbers))  # Sorts the list first, then finds the largest number\nprint(\"Largest number after sorting:\", largest)\n\n# Example 3: Combining custom and built-in functions\ndef square(number):\n    return number * number\n\nsquared_sum = sum(square(x) for x in range(1, 4))  # Squares each number from 1 to 3, then sums them\nprint(\"Sum of squares:\", squared_sum)",
+        "task1": "Task 1: Write a Python program that defines two functions: <tt style='color:red;'>double(x)</tt> to return <tt style='color:red;'>x * 2</tt> and <tt style='color:red;'>add_five(x)</tt> to return <tt style='color:red;'>x + 5</tt>. Use a nested function call to calculate and print the result of doubling <tt style='color:red;'>3</tt> and then adding <tt style='color:red;'>5</tt>.",
+        "task2": "Task 2: Write a Python program that defines three functions: <tt style='color:red;'>square(x)</tt> to return <tt style='color:red;'>x * x</tt>, <tt style='color:red;'>cube(x)</tt> to return <tt style='color:red;'>x * x * x</tt>, and <tt style='color:red;'>sum_of_results(a, b)</tt> to return the sum of the square of <tt style='color:red;'>a</tt> and the cube of <tt style='color:red;'>b</tt>. Use nested function calls to compute and print the result of <tt style='color:red;'>a=2</tt> and <tt style='color:red;'>b=3</tt>.",
+        "phases": "4"
+    },
+    "4.25": {
+        "title": "Variable Scope",
+        "des": "Variable scope determines the accessibility of variables based on where they are declared.",
+        "keypoint1": "Global variables are accessible from anywhere in the program, local variables are only accessible within their scope.",
+        "keypoint2": "Local scope pertains to variables declared within a function or block.",
+        "keypoint3": "Understanding scope is crucial for managing how data is stored and modified throughout a program.",
+        "example": "\n# Example 1: Global and local scope\nx = 10  # Global variable\n\ndef modify_variable():\n    x = 5  # Local variable\n    print(\"Inside function, local x:\", x)\n\nmodify_variable()\nprint(\"Outside function, global x:\", x)\n\n# Example 2: Accessing global variables inside a function\ny = 20  # Global variable\n\ndef access_global():\n    global y  # Declare the intention to use the global variable\n    y = 15  # Modifying the global variable\n    print(\"Inside function, modified global y:\", y)\n\naccess_global()\nprint(\"Outside function, global y:\", y)\n\n# Example 3: Nested scope with functions\ndef outer_function():\n    outer_var = \"Outer\"\n\n    def inner_function():\n        inner_var = \"Inner\"\n        print(\"Accessing outer_var from inner_function:\", outer_var)\n        print(\"Inner function variable:\", inner_var)\n\n    inner_function()\n    # print(inner_var)  # Uncommenting this will cause an error, as inner_var is not accessible here\n\nouter_function()",
+        "task1": "Task 1: Write a Python program that defines a global variable <tt style='color:red;'>counter</tt> with a value of <tt style='color:red;'>10</tt>. Inside a function <tt style='color:red;'>increment()</tt>, declare a local variable with the same name <tt style='color:red;'>counter</tt> and assign it a value of <tt style='color:red;'>5</tt>. Print both the global and local variables to demonstrate scope.",
+        "task2": "Task 2: Write a Python program that defines a global variable <tt style='color:red;'>total</tt> with a value of <tt style='color:red;'>50</tt>. Inside a function <tt style='color:red;'>update_total()</tt>, use the <tt style='color:red;'>global</tt> keyword to modify <tt style='color:red;'>total</tt> by adding <tt style='color:red;'>30</tt>. Call the function and print the updated global variable.",
+        "phases": "4"
+    },
+    "4.26": {
+        "title": "Args",
+        "des": "The *args parameter in a function allows it to accept an arbitrary number of positional arguments.",
+        "keypoint1": "*args collects extra positional arguments as a tuple which makes it flexible in function calls.",
+        "keypoint2": "It's useful for functions where the number of inputs may vary.",
+        "keypoint3": "Commonly used in functions that need to iterate over multiple arguments performing similar operations.",
+        "example": "\n# Example 1: Understanding *args\ndef print_args(*args):\n    print(\"Arguments received as a tuple:\", args)\n\n# Call with varying numbers of arguments\nprint_args(1, 2, 3)  # Three arguments\nprint_args(\"apple\", \"banana\")  # Two arguments\nprint_args()  # No arguments\n\n# Example 2: Summing numbers using *args\ndef sum_numbers(*args):\n    print(\"Numbers to add:\", args)\n    total = sum(args)  # Use the sum() function for simplicity\n    print(\"Sum of numbers:\", total)\n\nsum_numbers(5, 10, 15)  # Add three numbers\nsum_numbers(7, 3)  # Add two numbers\n\n# Example 3: Mixing fixed arguments with *args\ndef introduce_person(name, *hobbies):\n    print(f\"Name: {name}\")\n    if hobbies:\n        print(\"Hobbies:\")\n        for hobby in hobbies:\n            print(f\"- {hobby}\")\n    else:\n        print(\"No hobbies provided.\")\n\nintroduce_person(\"Alice\", \"reading\", \"swimming\", \"painting\")  # With hobbies\nintroduce_person(\"Bob\")  # Without hobbies",
+        "task1": "Task 1: Write a Python function named <tt style='color:red;'>print_numbers()</tt> that takes a variable number of arguments using <tt style='color:red;'>*args</tt>. The function should print all the arguments passed to it. Call the function with <tt style='color:red;'>1, 2, 3, 4</tt>.",
+        "task2": "Task 2: Write a Python function named <tt style='color:red;'>calculate_average()</tt> that takes a variable number of numeric arguments using <tt style='color:red;'>*args</tt>. The function should calculate and return the average of all the numbers. Call the function with <tt style='color:red;'>10, 20, 30, 40</tt> and print the result.",
+        "phases": "4"
+    },
+    "4.27": {
+        "title": "Kwargs",
+        "des": "The **kwargs parameter allows a function to accept any number of keyword arguments.",
+        "keypoint1": "**kwargs collects extra keyword arguments as a dictionary, making functions extremely flexible.",
+        "keypoint2": "Useful for configurations where a function accepts various options as keyword arguments.",
+        "keypoint3": "Keywords arguments can be iterated over if you need to process them individually.",
+        "example": "\n# Example 1: Basic use of **kwargs\ndef display_info(**kwargs):\n    print(\"The provided keyword arguments are stored in a dictionary:\", kwargs)\n\ndisplay_info(name=\"Alice\", age=25, city=\"New York\")  # Pass multiple keyword arguments\ndisplay_info(fruit=\"apple\", color=\"red\", price=1.5)  # Another set of keyword arguments\ndisplay_info()  # No keyword arguments\n\n# Explanation:\n# In this example, **kwargs collects all keyword arguments into a dictionary called kwargs.\n# You can access its keys and values like a regular dictionary.\n\n# Example 2: Iterating over **kwargs\ndef print_settings(**kwargs):\n    for key, value in kwargs.items():\n        print(f\"{key}: {value}\")\n\nprint_settings(theme=\"dark\", font_size=12, language=\"English\")\nprint_settings(volume=75, brightness=50)\n\n# Explanation:\n# The .items() method allows you to loop through all the key-value pairs in the **kwargs dictionary.\n\n# Example 3: Combining regular arguments with **kwargs\ndef describe_person(name, **kwargs):\n    print(f\"Name: {name}\")\n    if kwargs:\n        print(\"Additional details:\")\n        for key, value in kwargs.items():\n            print(f\"- {key}: {value}\")\n\ndescribe_person(\"Alice\", age=25, city=\"Los Angeles\", hobby=\"reading\")\ndescribe_person(\"Bob\", profession=\"Engineer\", country=\"USA\")\n\n# Explanation:\n# The function requires one positional argument (name) and accepts additional optional keyword arguments.\n# This makes the function flexible and easy to use in different situations.",
+        "task1": "Task 1: Write a Python function named <tt style='color:red;'>display_info()</tt> that accepts a variable number of keyword arguments using <tt style='color:red;'>**kwargs</tt>. The function should print each key-value pair in the format: <tt style='color:red;'>key: value</tt>. Call the function with <tt style='color:red;'>name=\"Alice\", age=30, city=\"New York\"</tt>.",
+        "task2": "Task 2: Write a Python function named <tt style='color:red;'>generate_profile()</tt> that accepts one required argument <tt style='color:red;'>username</tt> and additional attributes using <tt style='color:red;'>**kwargs</tt>. The function should return a dictionary combining <tt style='color:red;'>username</tt> and all the provided attributes. Call the function with <tt style='color:red;'>username=\"user123\"</tt>, <tt style='color:red;'>email=\"user123@example.com\"</tt>, and <tt style='color:red;'>is_active=True</tt>, and print the resulting dictionary.",
+        "phases": "4"
+    },
+
+
+
+    "5.40": {
+        "title": "Object-Oriented Programming (OOP)",
+        "des": "OOP is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes), and code, in the form of procedures (often known as methods).",
+        "keypoint1": "A class is like a blueprint for creating objects.",
+        "keypoint2": "An object is an instance of a class.",
+        "keypoint3": "OOP focuses on encapsulating data and functions into units within an application.",
+        "example": "\n# Example 1: Defining a class and creating an object\nclass Person:\n    # Constructor method to initialize attributes\n    def __init__(self, name, age):\n        self.name = name  # Attribute\n        self.age = age  # Attribute\n    \n    # Method to display information\n    def introduce(self):\n        print(f\"My name is {self.name} and I am {self.age} years old.\")\n\n# Creating an object of the Person class\nperson1 = Person(\"Alice\", 25)\nperson1.introduce()  # Calling the method on the object\n\n# Example 2: Creating another object from the same class\nperson2 = Person(\"Bob\", 30)\nperson2.introduce()",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Person</tt> with an <tt style='color:red;'>__init__</tt> method that initializes attributes <tt style='color:red;'>name</tt> and <tt style='color:red;'>age</tt>. Add a method <tt style='color:red;'>introduce()</tt> that prints <tt style='color:red;'>\"My name is [name] and I am [age] years old.\"</tt>. Create an instance of the class and call the <tt style='color:red;'>introduce()</tt> method.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Rectangle</tt> with an <tt style='color:red;'>__init__</tt> method that initializes attributes <tt style='color:red;'>length</tt> and <tt style='color:red;'>width</tt>. Add two methods: <tt style='color:red;'>area()</tt> to calculate and return the area of the rectangle, and <tt style='color:red;'>perimeter()</tt> to calculate and return the perimeter. Create an instance of the class, calculate the area and perimeter, and print the results.",
+        "phases": "5"
+    },
+    "5.41": {
+        "title": "Class Variables",
+        "des": "Class variables are variables that are shared among all instances of a class. They are not unique to each instance.",
+        "keypoint1": "Class variables are defined within the class construction but outside any methods.",
+        "keypoint2": "Instance variables are unique to each instance and are defined within methods, commonly within __init__().",
+        "keypoint3": "Class variables are great for defining properties that should be the same for every class instance.",
+        "example": "\n# Example 1: Defining and accessing a class variable\nclass Dog:\n    # Class variable shared by all instances\n    species = \"Canis familiaris\"\n    \n    def __init__(self, name, age):\n        self.name = name  # Instance variable unique to each object\n        self.age = age  # Instance variable unique to each object\n    \n    def describe(self):\n        print(f\"{self.name} is {self.age} years old and belongs to the species {Dog.species}.\")\n\n# Creating instances of the Dog class\ndog1 = Dog(\"Buddy\", 5)\ndog2 = Dog(\"Charlie\", 3)\n\ndog1.describe()\ndog2.describe()\n\n# Accessing the class variable directly\nprint(\"Class variable (species):\", Dog.species)\n\n# Example 2: Modifying a class variable\nDog.species = \"Domestic Dog\"  # Change the class variable for all instances\n\ndog1.describe()\ndog2.describe()",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Car</tt> with a class variable <tt style='color:red;'>wheels</tt> initialized to <tt style='color:red;'>4</tt>. The class should also have an <tt style='color:red;'>__init__</tt> method to initialize an instance variable <tt style='color:red;'>brand</tt>. Create two instances of the class with different brands and print the <tt style='color:red;'>brand</tt> and <tt style='color:red;'>wheels</tt> for each instance.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Employee</tt> with a class variable <tt style='color:red;'>company_name</tt> initialized to <tt style='color:red;'>\"TechCorp\"</tt>. Add an <tt style='color:red;'>__init__</tt> method to initialize an instance variable <tt style='color:red;'>name</tt>. Modify the class variable <tt style='color:red;'>company_name</tt> to <tt style='color:red;'>\"GlobalTech\"</tt> and print the updated class variable using both the class and an instance of the class.",
+        "phases": "5"
+    },
+    "5.42": {
+        "title": "Inheritance",
+        "des": "Inheritance allows new objects to take on the properties of existing objects, making it easier to create and maintain an application.",
+        "keypoint1": "A class can inherit attributes and methods from another class, called the superclass.",
+        "keypoint2": "The child class inherits all the public and protected properties and methods from the parent class.",
+        "keypoint3": "Inheritance supports the concept of 'reusability', making it possible to reuse existing code.",
+        "example": "\n# Example 1: Basic inheritance\nclass Animal:\n    def __init__(self, name):\n        self.name = name  # Common attribute for all animals\n\n    def eat(self):\n        print(f\"{self.name} is eating.\")\n\n# Child class inheriting from the Animal class\nclass Dog(Animal):\n    def bark(self):\n        print(f\"{self.name} is barking.\")\n\n# Creating an instance of the child class\ndog = Dog(\"Buddy\")\ndog.eat()  # Inherited method from the Animal class\ndog.bark()  # Method defined in the Dog class\n\n# Example 2: Adding unique attributes in the child class\nclass Cat(Animal):\n    def __init__(self, name, color):\n        self.name = name  # Manually initializing the parent class attribute\n        self.color = color  # Additional attribute for Cat\n\n    def meow(self):\n        print(f\"{self.name} is meowing. It has {self.color} fur.\")\n\n# Creating an instance of the Cat class\ncat = Cat(\"Whiskers\", \"white\")\ncat.eat()  # Inherited method from the Animal class\ncat.meow()  # Method defined in the Cat class",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Animal</tt> with a method <tt style='color:red;'>eat()</tt> that prints <tt style='color:red;'>\"This animal eats food.\"</tt>. Create a child class named <tt style='color:red;'>Dog</tt> that inherits from <tt style='color:red;'>Animal</tt> and adds a method <tt style='color:red;'>bark()</tt> that prints <tt style='color:red;'>\"This dog barks.\"</tt>. Create an instance of <tt style='color:red;'>Dog</tt> and call both the <tt style='color:red;'>eat()</tt> and <tt style='color:red;'>bark()</tt> methods.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Vehicle</tt> with an <tt style='color:red;'>__init__</tt> method to initialize <tt style='color:red;'>brand</tt> and a method <tt style='color:red;'>start()</tt> that prints <tt style='color:red;'>\"The vehicle is starting.\"</tt>. Create a child class named <tt style='color:red;'>Car</tt> that inherits from <tt style='color:red;'>Vehicle</tt> and adds a method <tt style='color:red;'>drive()</tt> that prints <tt style='color:red;'>\"The car is driving.\"</tt>. Create an instance of <tt style='color:red;'>Car</tt>, call its methods, and print the <tt style='color:red;'>brand</tt>.",
+        "phases": "5"
+    },
+    "5.43": {
+        "title": "Multilevel Inheritance",
+        "des": "Multilevel inheritance involves multiple levels of inheritance, where a class inherits from a child class, making it a grandchild class.",
+        "keypoint1": "In multilevel inheritance, features of the base class and the derived class are inherited into the new derived class.",
+        "keypoint2": "It can create a deep inheritance hierarchy.",
+        "keypoint3": "This type of inheritance helps to add more features to a class in a step-by-step manner.",
+        "example": "\n# Example 1: Multilevel inheritance with three levels\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self):\n        print(f\"{self.name} is eating.\")\n\n# First level of inheritance\nclass Mammal(Animal):\n    def walk(self):\n        print(f\"{self.name} is walking.\")\n\n# Second level of inheritance\nclass Dog(Mammal):\n    def bark(self):\n        print(f\"{self.name} is barking.\")\n\n# Creating an object of the grandchild class\ndog = Dog(\"Buddy\")\ndog.eat()   # Inherited from Animal\ndog.walk()  # Inherited from Mammal\ndog.bark()  # Defined in Dog\n\n# Example 2: Adding specific features at each level\nclass Vehicle:\n    def start(self):\n        print(\"The vehicle has started.\")\n\nclass Car(Vehicle):\n    def drive(self):\n        print(\"The car is being driven.\")\n\nclass ElectricCar(Car):\n    def charge(self):\n        print(\"The electric car is charging.\")\n\n# Creating an object of the grandchild class\ntesla = ElectricCar()\ntesla.start()  # Inherited from Vehicle\ntesla.drive()  # Inherited from Car\ntesla.charge()  # Defined in ElectricCar",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Animal</tt> with a method <tt style='color:red;'>eat()</tt> that prints <tt style='color:red;'>\"This animal eats food.\"</tt>. Create a child class named <tt style='color:red;'>Mammal</tt> that inherits from <tt style='color:red;'>Animal</tt> and adds a method <tt style='color:red;'>walk()</tt> that prints <tt style='color:red;'>\"This mammal walks.\"</tt>. Create a grandchild class named <tt style='color:red;'>Dog</tt> that inherits from <tt style='color:red;'>Mammal</tt> and adds a method <tt style='color:red;'>bark()</tt> that prints <tt style='color:red;'>\"This dog barks.\"</tt>. Create an instance of <tt style='color:red;'>Dog</tt> and call all three methods.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Vehicle</tt> with a method <tt style='color:red;'>start()</tt> that prints <tt style='color:red;'>\"The vehicle is starting.\"</tt>. Create a child class named <tt style='color:red;'>Car</tt> that inherits from <tt style='color:red;'>Vehicle</tt> and adds a method <tt style='color:red;'>drive()</tt> that prints <tt style='color:red;'>\"The car is driving.\"</tt>. Create a grandchild class named <tt style='color:red;'>ElectricCar</tt> that inherits from <tt style='color:red;'>Car</tt> and adds a method <tt style='color:red;'>charge()</tt> that prints <tt style='color:red;'>\"The electric car is charging.\"</tt>. Create an instance of <tt style='color:red;'>ElectricCar</tt> and call all three methods.",
+        "phases": "5"
+    },
+    "5.44": {
+        "title": "Multiple Inheritance",
+        "des": "Multiple inheritance is a feature in which a class can inherit attributes and methods from more than one parent class.",
+        "keypoint1": "Python supports multiple inheritance, unlike many other languages.",
+        "keypoint2": "This can lead to complexities and conflicts when the same attribute or method is inherited from multiple parent classes.",
+        "keypoint3": "The method resolution order (MRO) in Python determines the way in which methods are inherited in the presence of multiple inheritance.",
+        "example": "\nclass Prey:\n    def flee(self):\n        print('This animal flees')\nclass Predator:\n    def hunt(self):\n        print('This animal is hunting')\nclass Rabbit(Prey):\n    pass\nclass Fish(Prey, Predator):\n    def swim(self):\n        print('This fish swims away and hunts')",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Prey</tt> with a method <tt style='color:red;'>flee()</tt> that prints <tt style='color:red;'>\"This animal flees.\"</tt>. Create another class named <tt style='color:red;'>Predator</tt> with a method <tt style='color:red;'>hunt()</tt> that prints <tt style='color:red;'>\"This animal hunts.\"</tt>. Create a class named <tt style='color:red;'>Fish</tt> that inherits from both <tt style='color:red;'>Prey</tt> and <tt style='color:red;'>Predator</tt>. Create an instance of <tt style='color:red;'>Fish</tt> and call both the <tt style='color:red;'>flee()</tt> and <tt style='color:red;'>hunt()</tt> methods.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Flyable</tt> with a method <tt style='color:red;'>fly()</tt> that prints <tt style='color:red;'>\"This object can fly.\"</tt>. Create another class named <tt style='color:red;'>Swimmable</tt> with a method <tt style='color:red;'>swim()</tt> that prints <tt style='color:red;'>\"This object can swim.\"</tt>. Create a class named <tt style='color:red;'>Duck</tt> that inherits from both <tt style='color:red;'>Flyable</tt> and <tt style='color:red;'>Swimmable</tt>. Create an instance of <tt style='color:red;'>Duck</tt> and call both the <tt style='color:red;'>fly()</tt> and <tt style='color:red;'>swim()</tt> methods.",
+        "phases": "5"
+    },
+    "5.45": {
+        "title": "Method Overriding",
+        "des": "Method overriding allows a child class to provide a specific implementation of a method that is already defined in its superclass.",
+        "keypoint1": "Overriding is used when a method's behavior needs to be modified in the derived class.",
+        "keypoint2": "The overridden method in the child class should have the same name, parameters, and return type as the method in the parent class.",
+        "keypoint3": "Method overriding is a fundamental part of polymorphism.",
+        "example": "\n# Example 1: Basic method overriding\nclass Animal:\n    def sound(self):\n        print(\"Animals make sounds.\")\n\n# Child class overriding the sound method\nclass Dog(Animal):\n    def sound(self):\n        print(\"Dogs bark.\")\n\n# Creating instances and calling the sound method\ngeneric_animal = Animal()\ngeneric_animal.sound()  # Calls the method in the Animal class\n\ndog = Dog()\ndog.sound()  # Calls the overridden method in the Dog class\n\n# Example 2: Extending the behavior of the parent class method\nclass Bird(Animal):\n    def sound(self):\n        print(\"Birds chirp.\")\n\n# Creating an instance of Bird\nbird = Bird()\nbird.sound()  # Calls the overridden method in the Bird class\n\n# Explanation:\n# The `sound` method in Dog and Bird overrides the `sound` method in Animal, providing class-specific behavior.",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Animal</tt> with a method <tt style='color:red;'>sound()</tt> that prints <tt style='color:red;'>\"Animals make sounds.\"</tt>. Create a child class named <tt style='color:red;'>Cat</tt> that overrides the <tt style='color:red;'>sound()</tt> method to print <tt style='color:red;'>\"Cats meow.\"</tt>. Create an instance of <tt style='color:red;'>Cat</tt> and call the <tt style='color:red;'>sound()</tt> method.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Shape</tt> with a method <tt style='color:red;'>area()</tt> that prints <tt style='color:red;'>\"Calculating area...\"</tt>. Create a child class named <tt style='color:red;'>Rectangle</tt> that overrides the <tt style='color:red;'>area()</tt> method to calculate and return the area using attributes <tt style='color:red;'>length</tt> and <tt style='color:red;'>width</tt>. Initialize <tt style='color:red;'>length = 5</tt> and <tt style='color:red;'>width = 10</tt>, then call the <tt style='color:red;'>area()</tt> method and print the result.",
+        "phases": "5"
+    },
+    "5.46": {
+        "title": "Method Chaining",
+        "des": "Method chaining involves calling multiple methods sequentially on the same object, with each method returning the object itself to allow the next call.",
+        "keypoint1": "Each method returns the instance (usually using 'return self'), allowing the next method to be called immediately.",
+        "keypoint2": "Commonly used for enhancing readability and reducing the amount of code.",
+        "keypoint3": "Helpful for configuring an object in a step-by-step manner or applying multiple transformations.",
+        "example": "\n# Example 1: Basic method chaining\nclass Person:\n    def __init__(self, name):\n        self.name = name\n    \n    def set_age(self, age):\n        self.age = age\n        return self  # Returning the instance to enable chaining\n\n    def set_city(self, city):\n        self.city = city\n        return self  # Returning the instance to enable chaining\n\n    def introduce(self):\n        print(f\"My name is {self.name}, I am {self.age} years old, and I live in {self.city}.\")\n        return self  # Returning the instance for further chaining if needed\n\n# Using method chaining to configure and introduce a person\nperson = Person(\"Alice\").set_age(25).set_city(\"New York\").introduce()\n\n# Example 2: Method chaining for transformations\nclass TextProcessor:\n    def __init__(self, text):\n        self.text = text\n    \n    def to_upper(self):\n        self.text = self.text.upper()\n        return self  # Returning the instance\n    \n    def replace_spaces(self):\n        self.text = self.text.replace(\" \", \"_\")\n        return self  # Returning the instance\n    \n    def print_text(self):\n        print(self.text)\n        return self  # Returning the instance\n\n# Using method chaining for text transformations\nTextProcessor(\"Hello World\").to_upper().replace_spaces().print_text()",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Person</tt> with methods <tt style='color:red;'>set_name()</tt>, <tt style='color:red;'>set_age()</tt>, and <tt style='color:red;'>introduce()</tt>. Each method should return <tt style='color:red;'>self</tt> to allow method chaining. Use method chaining to set the name to <tt style='color:red;'>\"Alice\"</tt>, age to <tt style='color:red;'>25</tt>, and then call <tt style='color:red;'>introduce()</tt> to print the introduction message.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>ShoppingCart</tt> with methods <tt style='color:red;'>add_item()</tt>, <tt style='color:red;'>remove_item()</tt>, and <tt style='color:red;'>checkout()</tt>. Each method should return <tt style='color:red;'>self</tt> to enable method chaining. Use method chaining to add an item <tt style='color:red;'>\"Apple\"</tt>, remove an item <tt style='color:red;'>\"Orange\"</tt>, and then call <tt style='color:red;'>checkout()</tt> to print <tt style='color:red;'>\"Checking out...\"</tt>.",
+        "phases": "5"
+    },
+    "5.47": {
+        "title": "Super Function",
+        "des": "The super() function is used to call methods from a parent class from within a method of a child class, especially in a class hierarchy with inheritance.",
+        "keypoint1": "Super is commonly used in the constructor method (__init__) to ensure the parent class is correctly initialized.",
+        "keypoint2": "It can be used to access inherited methods that have been overridden in a class.",
+        "keypoint3": "Super simplifies calling complex hierarchies and helps to make method resolution order clear.",
+        "example": "\n# Example 1: Using super() in a constructor\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n        print(f\"Animal {self.name} is initialized.\")\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        super().__init__(name)  # Call the parent class constructor\n        self.breed = breed\n        print(f\"Dog of breed {self.breed} is initialized.\")\n\n# Creating an instance of the Dog class\ndog = Dog(\"Buddy\", \"Golden Retriever\")\n\n# Example 2: Using super() to access an overridden method\nclass Parent:\n    def show(self):\n        print(\"This is a method in Parent class.\")\n\nclass Child(Parent):\n    def show(self):\n        print(\"This is a method in Child class.\")\n        super().show()  # Call the overridden method in the Parent class\n\n# Creating an instance of the Child class\nchild = Child()\nchild.show()",
+        "task1": "Task 1: Write a Python class named <tt style='color:red;'>Animal</tt> with an <tt style='color:red;'>__init__</tt> method that initializes a <tt style='color:red;'>name</tt> attribute and prints <tt style='color:red;'>\"Animal initialized.\"</tt>. Create a child class named <tt style='color:red;'>Dog</tt> that inherits from <tt style='color:red;'>Animal</tt> and uses <tt style='color:red;'>super()</tt> in its <tt style='color:red;'>__init__</tt> method to initialize the <tt style='color:red;'>name</tt> attribute. Add a <tt style='color:red;'>breed</tt> attribute specific to <tt style='color:red;'>Dog</tt> and print <tt style='color:red;'>\"Dog initialized.\"</tt>. Create an instance of <tt style='color:red;'>Dog</tt> and verify that both initializations work correctly.",
+        "task2": "Task 2: Write a Python class named <tt style='color:red;'>Vehicle</tt> with a method <tt style='color:red;'>start()</tt> that prints <tt style='color:red;'>\"Vehicle started.\"</tt>. Create a child class named <tt style='color:red;'>Car</tt> that overrides the <tt style='color:red;'>start()</tt> method to print <tt style='color:red;'>\"Car started.\"</tt> and uses <tt style='color:red;'>super()</tt> to call the <tt style='color:red;'>start()</tt> method of <tt style='color:red;'>Vehicle</tt>. Create an instance of <tt style='color:red;'>Car</tt> and call the <tt style='color:red;'>start()</tt> method.",
+        "phases": "5"
+    },
+    "5.48": {
+        "title": "Abstract Classes",
+        "des": "Abstract classes are classes that contain one or more abstract methods. An abstract class cannot be instantiated, and they require subclasses to provide implementations for the abstract methods.",
+        "keypoint1": "Abstract classes are often used to provide a common interface for different classes.",
+        "keypoint2": "Abstract methods are declared, but contain no implementation.",
+        "keypoint3": "Subclasses must implement all abstract methods from an abstract class, or they too will be considered abstract classes.",
+        "example": "\nfrom abc import ABC, abstractmethod\n\n# Example 1: Defining an abstract class with an abstract method\nclass Animal(ABC):  # Inheriting from ABC to define an abstract class\n    @abstractmethod\n    def sound(self):\n        pass  # Abstract method with no implementation\n\n# Concrete subclass implementing the abstract method\nclass Dog(Animal):\n    def sound(self):\n        print(\"Dog barks.\")\n\nclass Cat(Animal):\n    def sound(self):\n        print(\"Cat meows.\")\n\n# Creating instances of the subclasses\ndog = Dog()\ndog.sound()\n\ncat = Cat()\ncat.sound()\n\n# Example 2: Abstract class with both concrete and abstract methods\nclass Vehicle(ABC):\n    def __init__(self, brand):\n        self.brand = brand\n\n    @abstractmethod\n    def start(self):\n        pass  # Abstract method\n\n    def show_brand(self):\n        print(f\"Vehicle brand: {self.brand}\")\n\nclass Car(Vehicle):\n    def start(self):\n        print(f\"The {self.brand} car is starting.\")\n\n# Creating an instance of the subclass\ncar = Car(\"Tesla\")\ncar.show_brand()  # Calls the concrete method from the abstract class\ncar.start()  # Calls the implementation from the Car class",
+        "task1": "Task 1: Write a Python abstract class named <tt style='color:red;'>Shape</tt> with an abstract method <tt style='color:red;'>area()</tt>. Create a concrete class named <tt style='color:red;'>Rectangle</tt> that inherits from <tt style='color:red;'>Shape</tt> and implements the <tt style='color:red;'>area()</tt> method to calculate the area using attributes <tt style='color:red;'>length</tt> and <tt style='color:red;'>width</tt>. Initialize <tt style='color:red;'>length = 5</tt> and <tt style='color:red;'>width = 10</tt>, and call the <tt style='color:red;'>area()</tt> method to print the result.",
+        "task2": "Task 2: Write a Python abstract class named <tt style='color:red;'>Vehicle</tt> with an abstract method <tt style='color:red;'>start()</tt>. Add a concrete method <tt style='color:red;'>show_brand()</tt> that prints the brand of the vehicle. Create a subclass named <tt style='color:red;'>Car</tt> that implements the <tt style='color:red;'>start()</tt> method to print <tt style='color:red;'>\"Car is starting.\"</tt>. Initialize a <tt style='color:red;'>Car</tt> instance with a brand, call <tt style='color:red;'>show_brand()</tt>, and then call <tt style='color:red;'>start()</tt>.",
+        "phases": "5"
+    },
+
+
+
+    "6.54": {
+        "title": "Lambda Functions",
+        "des": "Lambda functions or anonymous functions are small, one-line functions that are not defined with a standard 'def' keyword but with the 'lambda' keyword.",
+        "keypoint1": "Lambda functions can take any number of arguments but only have one expression.",
+        "keypoint2": "They are used for creating small, throw-away functions that are often used where function objects are required.",
+        "keypoint3": "Commonly used in higher-order functions such as map(), filter(), and reduce().",
+        "example": "\n# Example 1: Basic lambda function\nsquare = lambda x: x * x\nprint(\"Square of 5:\", square(5))  # Output: 25\n\n# Example 2: Lambda function with multiple arguments\nadd = lambda x, y: x + y\nprint(\"Sum of 3 and 7:\", add(3, 7))  # Output: 10\n\n# Example 3: Using lambda for simple calculations\nis_even = lambda x: x % 2 == 0\nprint(\"Is 4 even?:\", is_even(4))  # Output: True\nprint(\"Is 5 even?:\", is_even(5))  # Output: False",
+        "task1": "Task 1: Write a Python lambda function that takes one argument <tt style='color:red;'>x</tt> and returns its cube. Call the lambda function with <tt style='color:red;'>x = 3</tt> and print the result.",
+        "task2": "Task 2: Write a Python lambda function that takes two arguments <tt style='color:red;'>a</tt> and <tt style='color:red;'>b</tt> and returns their sum. Use this lambda function with the <tt style='color:red;'>map()</tt> function to add corresponding elements of two lists <tt style='color:red;'>[1, 2, 3]</tt> and <tt style='color:red;'>[4, 5, 6]</tt>. Print the resulting list.",
+        "phases": "6"
+    },
+    "6.55": {
+        "title": "Sort Function",
+        "des": "Sorting is a fundamental aspect of data manipulation in Python, involving rearranging data in a specific order. The sort() method modifies the list it is called on, while the sorted() function creates a new sorted list from the elements of any iterable.",
+        "keypoint1": "The sort() method is an in-place sort, meaning it does not return a new list. Instead, it modifies the original list.",
+        "keypoint2": "The sorted() function returns a new sorted list from the elements of any iterable, leaving the original iterable unchanged.",
+        "keypoint3": "Both sort() and sorted() accept a 'key' parameter to specify a function to be called on each list element before making comparisons.",
+        "example": "\n# Example 1: Using the sort() method for in-place sorting\nnumbers = [5, 3, 8, 1, 2]\nprint(\"Original list:\", numbers)\nnumbers.sort()  # Sorts the list in ascending order\nprint(\"Sorted list (in-place):\", numbers)\n\n# Example 2: Using the sorted() function for creating a new sorted list\noriginal_numbers = [5, 3, 8, 1, 2]\nnew_sorted_numbers = sorted(original_numbers)  # Returns a new sorted list\nprint(\"Original list:\", original_numbers)  # Remains unchanged\nprint(\"New sorted list:\", new_sorted_numbers)\n\n# Example 3: Using the key parameter for custom sorting\nwords = [\"banana\", \"apple\", \"cherry\", \"blueberry\"]\nprint(\"Original list of words:\", words)\nwords.sort(key=len)  # Sorts words based on their length\nprint(\"Words sorted by length (in-place):\", words)\n\n# Example 4: sorted() with key parameter\noriginal_words = [\"banana\", \"apple\", \"cherry\", \"blueberry\"]\nnew_sorted_words = sorted(original_words, key=len)  # New sorted list by length\nprint(\"Original words list:\", original_words)  # Remains unchanged\nprint(\"New words sorted by length:\", new_sorted_words)",
+        "task1": "Task 1: Write a Python program to create a list of integers <tt style='color:red;'>[15, 3, 9, 1, 7]</tt> and sort it in descending order using the <tt style='color:red;'>sorted()</tt> function. Print the sorted list.",
+        "task2": "Task 2: Write a Python program to create a list of tuples <tt style='color:red;'>[(\"Alice\", 25), (\"Bob\", 30), (\"Charlie\", 20)]</tt> and sort it in ascending order based on the second element of each tuple (the age) using the <tt style='color:red;'>sort()</tt> method with a <tt style='color:red;'>key</tt> parameter. Print the sorted list.",
+        "phases": "6"
+    },
+    "6.56": {
+        "title": "Map Function",
+        "des": "The map() function applies a given function to each item of an iterable (like a list) and returns a list of the results.",
+        "keypoint1": "The map() function takes a function and one or more iterables as arguments.",
+        "keypoint2": "It's often used for transforming data efficiently without explicit loops.",
+        "keypoint3": "The result is a map object which is an iterator that needs to be converted into a list or another iterable type to see the results.",
+        "example": "\n# Example 1: Applying a simple function to a list\ndef square(x):\n    return x * x\n\nnumbers = [1, 2, 3, 4, 5]\nsquared_numbers = map(square, numbers)  # Apply the square function to each item\nprint(\"Squared numbers (as a list):\", list(squared_numbers))\n\n# Example 2: Using a lambda function with map()\nnumbers = [2, 4, 6, 8, 10]\ndoubled_numbers = map(lambda x: x * 2, numbers)  # Double each item in the list\nprint(\"Doubled numbers:\", list(doubled_numbers))\n\n# Example 3: Mapping over multiple iterables\nlist1 = [1, 2, 3]\nlist2 = [4, 5, 6]\nsummed_numbers = map(lambda x, y: x + y, list1, list2)  # Sum corresponding elements\nprint(\"Sum of corresponding elements:\", list(summed_numbers))",
+        "task1": "Task 1: Write a Python program that uses the <tt style='color:red;'>map()</tt> function with a lambda function to square each number in the list <tt style='color:red;'>[1, 2, 3, 4, 5]</tt>. Print the resulting list.",
+        "task2": "Task 2: Write a Python program that uses the <tt style='color:red;'>map()</tt> function with a lambda function to concatenate the prefix <tt style='color:red;'>\"Dr. \"</tt> to each name in the list <tt style='color:red;'>[\"Alice\", \"Bob\", \"Charlie\"]</tt>. Print the resulting list of names.",
+        "phases": "6"
+    },
+    "6.57": {
+        "title": "Filter Function",
+        "des": "The filter() function creates an iterator from elements of an iterable for which a function returns true.",
+        "keypoint1": "Similar to map(), filter() takes a function and an iterable, but the function must return a boolean value.",
+        "keypoint2": "It's used to select certain pieces of data from a list, tuple, or other collection.",
+        "keypoint3": "Like map(), the result of filter() is also an iterator and needs to be converted to a list or tuple to be seen.",
+        "example": "\n# Example 1: Filtering even numbers from a list\ndef is_even(x):\n    return x % 2 == 0\n\nnumbers = [1, 2, 3, 4, 5, 6]\neven_numbers = filter(is_even, numbers)  # Filter out even numbers\nprint(\"Even numbers:\", list(even_numbers))\n\n# Example 2: Using a lambda function with filter()\nnumbers = [10, 15, 20, 25, 30]\nmultiples_of_five = filter(lambda x: x % 5 == 0, numbers)  # Select multiples of 5\nprint(\"Multiples of five:\", list(multiples_of_five))\n\n# Example 3: Filtering strings based on length\nnames = [\"Alice\", \"Bob\", \"Charlie\", \"Eve\"]\nshort_names = filter(lambda name: len(name) <= 3, names)  # Select names with 3 or fewer characters\nprint(\"Short names:\", list(short_names))",
+        "task1": "Task 1: Write a Python program that uses the <tt style='color:red;'>filter()</tt> function with a lambda function to select only even numbers from the list <tt style='color:red;'>[1, 2, 3, 4, 5, 6]</tt>. Print the resulting list.",
+        "task2": "Task 2: Write a Python program that uses the <tt style='color:red;'>filter()</tt> function with a lambda function to select words longer than <tt style='color:red;'>3</tt> characters from the list <tt style='color:red;'>[\"cat\", \"elephant\", \"dog\", \"fish\"]</tt>. Print the resulting list.",
+        "phases": "6"
+    },
+    "6.58": {
+        "title": "Reduce Function",
+        "des": "The reduce() function reduces an iterable to a single cumulative value. It applies a function of two arguments cumulatively to the items of an iterable.",
+        "keypoint1": "It is part of the functools module, unlike map() and filter() which are built-ins.",
+        "keypoint2": "Commonly used for performing some computation on a list and returning the result.",
+        "keypoint3": "It can be used to implement functions that are aggregative in nature.",
+        "example": "\nfrom functools import reduce\n\n# Example 1: Summing all numbers in a list\nnumbers = [1, 2, 3, 4, 5]\nsum_result = reduce(lambda x, y: x + y, numbers)  # Adds numbers cumulatively\nprint(\"Sum of numbers:\", sum_result)\n\n# Example 2: Finding the product of all numbers in a list\nproduct_result = reduce(lambda x, y: x * y, numbers)  # Multiplies numbers cumulatively\nprint(\"Product of numbers:\", product_result)\n\n# Example 3: Finding the maximum value in a list\nmax_value = reduce(lambda x, y: x if x > y else y, numbers)\nprint(\"Maximum value:\", max_value)",
+        "task1": "Task 1: Write a Python program that uses the <tt style='color:red;'>reduce()</tt> function from the <tt style='color:red;'>functools</tt> module to calculate the product of all numbers in the list <tt style='color:red;'>[1, 2, 3, 4]</tt>. Print the result.",
+        "task2": "Task 2: Write a Python program that uses the <tt style='color:red;'>reduce()</tt> function from the <tt style='color:red;'>functools</tt> module to find the longest word in the list <tt style='color:red;'>[\"apple\", \"banana\", \"cherry\", \"date\"]</tt>. Print the longest word.",
+        "phases": "6"
+    },
+    "6.59": {
+        "title": "List Comprehensions",
+        "des": "List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable.",
+        "keypoint1": "A more concise and readable way to create lists than using loops and lambda functions.",
+        "keypoint2": "Supports conditional logic within the comprehension itself.",
+        "keypoint3": "Often used for filtering and transforming data.",
+        "example": "\n# Example 1: Basic list comprehension\nnumbers = [1, 2, 3, 4, 5]\nsquared_numbers = [x * x for x in numbers]  # Squares each number\nprint(\"Squared numbers:\", squared_numbers)\n\n# Example 2: List comprehension with conditional logic\neven_numbers = [x for x in numbers if x % 2 == 0]  # Filters even numbers\nprint(\"Even numbers:\", even_numbers)\n\n# Example 3: Transforming strings in a list\nnames = [\"Alice\", \"Bob\", \"Charlie\"]\nuppercase_names = [name.upper() for name in names]  # Converts each name to uppercase\nprint(\"Uppercase names:\", uppercase_names)\n\n# Example 4: Using conditional logic for transformation\nmodified_numbers = [x * 2 if x % 2 == 0 else x for x in numbers]  # Doubles even numbers, keeps odd numbers as-is\nprint(\"Modified numbers:\", modified_numbers)",
+        "task1": "Task 1: Write a Python program that uses a list comprehension to create a list of squares of numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>10</tt>. Print the resulting list.",
+        "task2": "Task 2: Write a Python program that uses a list comprehension with a condition to filter out all numbers less than <tt style='color:red;'>5</tt> from the list <tt style='color:red;'>[2, 5, 8, 1, 10, 3]</tt> and double the remaining numbers. Print the resulting list.",
+        "phases": "6"
+    },
+    "6.60": {
+        "title": "Dictionary Comprehensions",
+        "des": "Dictionary comprehensions are similar to list comprehensions, but allow you to easily construct dictionaries.",
+        "keypoint1": "Allows for quick transformation of one dictionary or pairing of two lists into a dictionary.",
+        "keypoint2": "Can include conditional logic to include only certain elements.",
+        "keypoint3": "Useful for creating dictionaries in a succinct and intuitive way.",
+        "example": "\n# Example 1: Basic dictionary comprehension\nnumbers = [1, 2, 3, 4, 5]\nsquared_dict = {x: x * x for x in numbers}  # Create a dictionary of numbers and their squares\nprint(\"Squared dictionary:\", squared_dict)\n\n# Example 2: Using conditional logic in dictionary comprehension\neven_squared_dict = {x: x * x for x in numbers if x % 2 == 0}  # Include only even numbers\nprint(\"Even squared dictionary:\", even_squared_dict)\n\n# Example 3: Transforming an existing dictionary\noriginal_dict = {\"Alice\": 25, \"Bob\": 30, \"Charlie\": 35}\nage_in_months = {key: value * 12 for key, value in original_dict.items()}  # Convert age to months\nprint(\"Ages in months:\", age_in_months)\n\n# Example 4: Pairing two lists to create a dictionary\nkeys = [\"name\", \"age\", \"city\"]\nvalues = [\"Alice\", 25, \"New York\"]\npaired_dict = {key: value for key, value in zip(keys, values)}  # Pair elements from both lists\nprint(\"Paired dictionary:\", paired_dict)",
+        "task1": "Task 1: Write a Python program that uses a dictionary comprehension to create a dictionary where the keys are numbers from <tt style='color:red;'>1</tt> to <tt style='color:red;'>5</tt> and the values are their squares. Print the resulting dictionary.",
+        "task2": "Task 2: Write a Python program that uses a dictionary comprehension to create a dictionary from the list of tuples <tt style='color:red;'>[(\"Alice\", 25), (\"Bob\", 30), (\"Charlie\", 35)]</tt> where the keys are the names and the values are the ages. Print the resulting dictionary.",
+        "phases": "6"
+    },
+    "6.61": {
+        "title": "Zip Function",
+        "des": "The zip() function takes iterables (can be zero or more), aggregates them in a tuple, and returns it.",
+        "keypoint1": "Useful for creating pairs of elements when you have multiple lists of the same length.",
+        "keypoint2": "If the passed iterators have different lengths, the iterator with the least items decides the length of the new iterator.",
+        "keypoint3": "Commonly used for simultaneous looping over multiple lists.",
+        "example": "\n# Example 1: Zipping two lists together\nnames = [\"Alice\", \"Bob\", \"Charlie\"]\nages = [25, 30, 35]\npaired = zip(names, ages)  # Combine names and ages into pairs\nprint(\"Paired list:\", list(paired))\n\n# Example 2: Handling lists of different lengths\nshort_names = [\"Alice\", \"Bob\"]\nlong_ages = [25, 30, 35, 40]\nresult = zip(short_names, long_ages)  # Stops when the shortest list is exhausted\nprint(\"Zipped list with unequal lengths:\", list(result))\n\n# Example 3: Using zip() for simultaneous looping\ncities = [\"New York\", \"Los Angeles\", \"Chicago\"]\ntemperatures = [22, 18, 15]\nfor city, temp in zip(cities, temperatures):\n    print(f\"The temperature in {city} is {temp}°C.\")\n\n# Example 4: Unzipping with zip()\npairs = [(\"Alice\", 25), (\"Bob\", 30), (\"Charlie\", 35)]\nnames, ages = zip(*pairs)  # Unzips pairs into separate tuples\nprint(\"Names:\", names)\nprint(\"Ages:\", ages)",
+        "task1": "Task 1: Write a Python program that uses the <tt style='color:red;'>zip()</tt> function to combine two lists <tt style='color:red;'>[\"Alice\", \"Bob\", \"Charlie\"]</tt> and <tt style='color:red;'>[25, 30, 35]</tt> into a list of tuples. Print the resulting list.",
+        "task2": "Task 2: Write a Python program that uses the <tt style='color:red;'>zip()</tt> function to combine three lists <tt style='color:red;'>[\"name\", \"age\", \"city\"]</tt>, <tt style='color:red;'>[\"Alice\", 30, \"New York\"]</tt>, and <tt style='color:red;'>[\"Bob\", 25, \"Los Angeles\"]</tt> into a list of tuples where each tuple contains one element from each list. Print the resulting list.",
+        "phases": "6"
+    }
+}

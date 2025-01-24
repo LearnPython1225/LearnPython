@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content" class="smooth-scroll" id="scrollToLearningContent">Learning Content</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+              
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Phase 5: Object-Oriented Programming (OOP)</h1>
+            <p><b>Goal:</b> Understand the concept of classes and objects, and learn the principles of OOP.</p>
+            <ul>
+                <li>Classes and Objects</li>
+                <li>Inheritance and Polymorphism</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        
+        <!-- Subsection 1: Object-Oriented Programming (OOP) -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Object-Oriented Programming (OOP)</h3>
+            <a href="{{ url_for('learn',chp='5.40') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> OOP is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields (often known as attributes), and code, in the form of procedures (often known as methods).
+            <ul>
+                <li>A class is like a blueprint for creating objects.</li>
+                <li>An object is an instance of a class.</li>
+                <li>OOP focuses on encapsulating data and functions into units within an application.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 2: Class Variables -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Class Variables</h3>
+            <a href="{{ url_for('learn',chp='5.41') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Class variables are variables that are shared among all instances of a class. They are not unique to each instance.
+            <ul>
+                <li>Class variables are defined within the class construction but outside any methods.</li>
+                <li>Instance variables are unique to each instance and are defined within methods, commonly within __init__().</li>
+                <li>Class variables are great for defining properties that should be the same for every class instance.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 3: Inheritance -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Inheritance</h3>
+            <a href="{{ url_for('learn',chp='5.42') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Inheritance allows new objects to take on the properties of existing objects, making it easier to create and maintain an application.
+            <ul>
+                <li>A class can inherit attributes and methods from another class, called the superclass.</li>
+                <li>The child class inherits all the public and protected properties and methods from the parent class.</li>
+                <li>Inheritance supports the concept of 'reusability', making it possible to reuse existing code.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 4: Multilevel Inheritance -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Multilevel Inheritance</h3>
+            <a href="{{ url_for('learn',chp='5.43') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Multilevel inheritance involves multiple levels of inheritance, where a class inherits from a child class, making it a grandchild class.
+            <ul>
+                <li>In multilevel inheritance, features of the base class and the derived class are inherited into the new derived class.</li>
+                <li>It can create a deep inheritance hierarchy.</li>
+                <li>This type of inheritance helps to add more features to a class in a step-by-step manner.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 5: Multiple Inheritance -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Multiple Inheritance</h3>
+            <a href="{{ url_for('learn',chp='5.44') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Multiple inheritance is a feature in which a class can inherit attributes and methods from more than one parent class.
+            <ul>
+                <li>Python supports multiple inheritance, unlike many other languages.</li>
+                <li>This can lead to complexities and conflicts when the same attribute or method is inherited from multiple parent classes.</li>
+                <li>The method resolution order (MRO) in Python determines the way in which methods are inherited in the presence of multiple inheritance.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 6: Method Overriding -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Method Overriding</h3>
+            <a href="{{ url_for('learn',chp='5.45') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Method overriding allows a child class to provide a specific implementation of a method that is already defined in its superclass.
+            <ul>
+                <li>Overriding is used when a method's behavior needs to be modified in the derived class.</li>
+                <li>The overridden method in the child class should have the same name, parameters, and return type as the method in the parent class.</li>
+                <li>Method overriding is a fundamental part of polymorphism.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 7: Method Chaining -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Method Chaining</h3>
+            <a href="{{ url_for('learn',chp='5.46') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Method chaining involves calling multiple methods sequentially on the same object, with each method returning the object itself to allow the next call.
+            <ul>
+                <li>Each method returns the instance (usually using 'return self'), allowing the next method to be called immediately.</li>
+                <li>Commonly used for enhancing readability and reducing the amount of code.</li>
+                <li>Helpful for configuring an object in a step-by-step manner or applying multiple transformations.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 8: Super Function -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Super Function</h3>
+            <a href="{{ url_for('learn',chp='5.47') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The super() function is used to call methods from a parent class from within a method of a child class, especially in a class hierarchy with inheritance.
+            <ul>
+                <li>Super is commonly used in the constructor method (__init__) to ensure the parent class is correctly initialized.</li>
+                <li>It can be used to access inherited methods that have been overridden in a class.</li>
+                <li>Super simplifies calling complex hierarchies and helps to make method resolution order clear.</li>
+                
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 9: Abstract Classes -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Abstract Classes</h3>
+            <a href="{{ url_for('learn',chp='5.48') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Abstract classes are classes that contain one or more abstract methods. An abstract class cannot be instantiated, and they require subclasses to provide implementations for the abstract methods.
+            <ul>
+                <li>Abstract classes are often used to provide a common interface for different classes.</li>
+                <li>Abstract methods are declared, but contain no implementation.</li>
+                <li>Subclasses must implement all abstract methods from an abstract class, or they too will be considered abstract classes.</li>
+                
+            </ul>
+        </div>
+
+        
+
+        
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

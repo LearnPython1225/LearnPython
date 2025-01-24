@@ -1,0 +1,473 @@
+/* -----------------------------
+   全局颜色与主题定义
+----------------------------- */
+:root {
+  --background: #111;
+  --text: #f5f5f7;
+  --text-secondary: #ccc;
+  --primary: #0071e3;
+  --primary-hover: #005bb5;
+  --border: #333;
+  --surface: #1c1c1e;
+  --surface-light: #2c2c2e;
+}
+
+/* -----------------------------
+   全局基础样式
+----------------------------- */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* -----------------------------
+   页头区样式
+----------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.back-link {
+  color: #f5f5f7; /* 与主题颜色一致 */
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-left: -68rem;
+  transition: color 0.3s ease;
+  
+}
+
+.back-link:hover {
+  color: #0071e3; /* 鼠标悬停时的颜色 */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--text-secondary);
+}
+
+/* -----------------------------
+   主容器布局
+   左侧为left-panel,右侧为right-panel
+----------------------------- */
+.main-container {
+  display: flex;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* 左侧面板样式 */
+.left-panel {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  width: 600px; /* 默认宽度 */
+  resize: none;
+  overflow: auto; /* 可滚动内容 */
+}
+
+.left-top {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.left-top h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.left-top p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.left-top code{
+  user-select: none; 
+
+}
+
+.section-title {
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+/* 左下侧为 ChatGPT 区域 */
+.left-bottom {
+  height: 600px;
+  background: #000;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: height 0.3s ease; /* 平滑过渡效果 */
+}
+
+.left-bottom h3 {
+  font-size: 1rem;
+  margin: 1rem;
+  font-weight: 500;
+}
+
+/* ChatGPT 容器 */
+.chatgpt-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000; /* 确保在其他元素之上 */
+}
+
+/* 聊天消息显示区 */
+/* Chat Messages Container */
+#chatMessages {
+  flex: 3;
+  background: #121212; /* 深灰背景，现代风格 */
+  padding: 1rem;
+  overflow-y: auto;
+  border: 1px solid #333; /* 边框颜色 */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+
+  color: #f5f5f5; /* 默认文字颜色 */
+  font-family: "Roboto", Arial, sans-serif; /* 更现代的字体 */
+}
+
+/* Inline Code Styling */
+#chatMessages code {
+  background-color: #1e1e2f; /* 深紫色背景 */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  color: #82aaff; /* 明亮的蓝色代码颜色 */
+  font-size: 0.95rem; /* 略小的字体，提升阅读体验 */
+}
+
+/* Code Block Styling */
+#chatMessages pre {
+  background-color: #1e1e1e; /* 代码块背景色 */
+  padding: 1rem;
+  border: 1px solid #444; /* 边框颜色 */
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Fira Code", "Courier New", monospace; /* 优化开发者常用字体 */
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #d4d4d4; /* 默认代码颜色 */
+}
+
+/* Specific Token Colors for Syntax Highlighting */
+#chatMessages pre .token.comment,
+#chatMessages code .token.comment {
+  color: #6a9955; /* 注释颜色，绿色 */
+}
+
+#chatMessages pre .token.keyword,
+#chatMessages code .token.keyword {
+  color: #c586c0; /* 关键字颜色，粉紫 */
+}
+
+#chatMessages pre .token.string,
+#chatMessages code .token.string {
+  color: #ce9178; /* 字符串颜色，橙色 */
+}
+
+#chatMessages pre .token.function,
+#chatMessages code .token.function {
+  color: #dcdcaa; /* 函数颜色，浅黄色 */
+}
+
+#chatMessages pre .token.number,
+#chatMessages code .token.number {
+  color: #b5cea8; /* 数字颜色，青绿色 */
+}
+
+#chatMessages pre .token.operator,
+#chatMessages code .token.operator {
+  color: #d4d4d4; /* 操作符颜色，灰白 */
+}
+
+/* List and Paragraph Styling */
+#chatMessages ul, #chatMessages ol {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+#chatMessages li {
+  margin-bottom: 0.3rem;
+}
+
+#chatMessages p {
+  margin-bottom: 0.75rem; /* 减小段落间距 */
+  color: #cccccc; /* 次要文本颜色 */
+}
+
+/* Error Message Styling */
+#chatMessages .error {
+  color: #f44336; /* 错误消息红色 */
+  font-weight: bold;
+}
+
+/* Strong and Bold Text */
+#chatMessages strong, #chatMessages b {
+  font-weight: bold;
+  color: #ffffff; /* 强调的文本颜色 */
+}
+
+/* 聊天输入区：确保输入框可点击、可聚焦、可输入 */
+.chat-input {
+  display: flex;
+  border-top: 1px solid var(--border);
+  z-index: 1001;
+}
+
+
+
+#ai-assistance-header {
+  display: flex; /* 使用 flex 布局 */
+  justify-content: space-between; /* 两端对齐 */
+  align-items: center; /* 垂直居中 */
+  padding: 0rem 1rem;
+}
+
+/* 去掉按钮背景和边框，变为纯文字样式 */
+.hide-btn {
+  background: none; /* 无背景 */
+  color: var(--text); /* 与文字颜色一致 */
+  border: none; /* 无边框 */
+  font-size: 0.9rem;
+  cursor: pointer; /* 鼠标悬停时显示为手型 */
+  margin-left: 10px;
+  padding: 0; /* 去掉默认的内边距 */
+}
+
+.hide-btn:hover {
+  text-decoration: underline; /* 悬停时增加下划线效果 */
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 0.75rem;
+  background: var(--surface-light);
+  color: var(--text);
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  font-size: 1rem;
+  cursor: text; /* 显示文本输入光标 */
+  pointer-events: auto; /* 确保可点击 */
+  user-select: text; /* 允许选择文本 */
+}
+
+.chat-input button {
+  padding: 0.75rem 1rem;
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+  border-radius: 0 8px 8px 0;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.chat-input button:hover {
+  background: var(--primary-hover);
+}
+
+/* 右侧面板样式 */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  overflow: hidden;
+  flex: 1;
+}
+
+.editor-header {
+  background: #000;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.editor-header span {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.run-btn {
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 24px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.run-btn:hover {
+  background: var(--primary-hover);
+}
+
+/* 上下分区：editor-area包含editor和terminal */
+.editor-area {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editor {
+  background: var(--surface-light);
+  overflow: auto;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: var(--text);
+  resize: none;
+  flex: 4; /* 默认高度 */
+  user-select: text; /* 可选择文本 */
+  pointer-events: auto; /* 可正常操作编辑器 */
+}
+
+
+
+.terminal {
+  flex: 1;
+  background: #000;
+  padding: 1rem;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: #0f0;
+  overflow: auto;
+  flex: 1; /* 默认高度 */
+}
+
+.terminal-output {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* 分隔条样式：如果有resizer和resizer-horizontal分别控制左右和上下 */
+.resizer {
+    width: 5px;
+    cursor: col-resize;
+    background-color: #333;
+    position: relative;
+    z-index: 10;
+}
+
+.resizer:hover {
+    background-color: #3A73C1;
+}
+
+.resizable-bar {
+  user-select: none;
+  cursor: col-resize;
+  background-color: transparent;
+  outline: none;
+}
+
+.resizer-horizontal {
+    height: 6px;
+    background: #444;
+    cursor: row-resize;
+    position: relative;
+    z-index: 10;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.resizer-horizontal:hover {
+  background-color: #3A73C1;
+}
+
+pre {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #1e1e1e; /* Match the dark theme */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+}
+
+/* 确保chat和输入框正常操作 */
+.chatgpt-container, .chat-input, .chat-input input {
+    pointer-events: auto; 
+    user-select: text; 
+}
+
+
+
+
+
+
+/* 小屏幕响应式 */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    height: 50vh;
+    resize: none;
+  }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='profilebutton.css') }}">
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content" class="smooth-scroll" id="scrollToLearningContent">Learning Content</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Phase 1: Python Basics</h1>
+            <p><b>Goal:</b> Understand Python syntax, variables, and basic I/O operations.</p>
+            <ul>
+                <li>Print Statement</li>
+                <li>Variables and Data Types</li>
+                <li>String Manipulation</li>
+                <li>Basic Input and Output</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Print Statement</h3>
+            <a href="{{ url_for('learn',chp='1.1') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The <code>print()</code> function is one of the most basic and frequently used functions in Python. It outputs information to the console and is essential for displaying messages, debugging, and user interaction.
+            </p>
+            <ul>
+                <li>The <code>print()</code> function can display text, numbers, variables, or a combination of these.</li>
+                <li>It automatically adds a newline after the output unless specified otherwise.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 2: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Variable Assignment</h3>
+            <a href="{{ url_for('learn',chp='1.2') }}" class="btn-secondary">Start Learning</a>
+            </div>
+            <p>
+                <b>Introduction:</b> Variables are containers for storing data values. Assigning variables in Python involves defining a variable name and setting it to a value.
+            </p>
+            <ul>
+                <li>Variables can hold various types of data, such as strings, integers, floats, and booleans.</li>
+                <li>Variable names are usually descriptive to make the code easier to understand.</li>
+                <li>Variables can be modified after their initial assignment, and Python automatically keeps track of the variable type.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 3: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Multiple Assignment</h3>
+            <a href="{{ url_for('learn',chp='1.3') }}" class="btn-secondary">Start Learning</a>
+            </div>
+            <p>
+                <b>Introduction:</b> Multiple assignments allow for assigning multiple variables at once in a single line, streamlining code and improving readability.
+            </p>
+            <ul>
+                <li>Multiple variables can be assigned in one line, which simplifies the code.</li>
+                <li>The values can be identical or different; Python handles both scenarios efficiently.</li>
+                <li>This technique is especially useful for initializing multiple variables simultaneously.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 4: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Type Casting</h3>
+            <a href="{{ url_for('learn',chp='1.5') }}" class="btn-secondary">Start Learning</a>
+            </div>
+            <p>
+                <b>Introduction:</b> Type casting in Python allows you to convert a variable from one type to another, which can be crucial for ensuring that operations on variables are possible.
+            </p>
+            <ul>
+                <li>Type casting is used to convert variables to a different type to perform operations that require a specific type.</li>
+                <li>Common type conversions are between integers, floats, and strings.</li>
+                <li>This is necessary for operations like concatenating strings with numbers.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 5: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>String Methods</h3>
+            <a href="{{ url_for('learn',chp='1.4') }}" class="btn-secondary">Start Learning</a>
+            </div>
+            <p>
+                <b>Introduction:</b> Python provides several built-in methods that can be used to manipulate strings, making text processing easier and more efficient.
+            </p>
+            <ul>
+                <li>String methods can transform, search, and modify strings without changing the original string.</li>
+                <li>Common methods include transforming case, finding substrings, and replacing characters.</li>
+                <li>These methods are essential for data cleaning, formatting, and preparation.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 6: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>String Slicing</h3>
+            <a href="{{ url_for('learn',chp='1.8') }}" class="btn-secondary">Start Learning</a>
+            </div>   
+            <p>
+                <b>Introduction:</b> String slicing allows you to extract parts of strings in Python, which is useful for string manipulation and data processing.
+            </p>
+            <ul>
+                <li>Slicing can be done with syntax like `string[start:stop:step]` to extract parts of a string.</li>
+                <li>This feature is invaluable for tasks like data parsing, cleaning, and formatting.</li>
+                <li>It also allows for reversing strings or extracting specific segments easily.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 7: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>User Input</h3>
+            <a href="{{ url_for('learn',chp='1.6') }}" class="btn-secondary">Start Learning</a>
+            </div>
+            <p>
+                <b>Introduction:</b> Handling user input is essential for creating interactive applications. Python's `input()` function makes it easy to take input from users.
+            </p>
+            <ul>
+                <li>The `input()` function captures user input as a string.</li>
+                <li>Input can be converted to other types, like integers or floats, to perform calculations or comparisons.</li>
+                <li>Handling input is crucial for personalized user experiences in applications.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 8: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Math Functions</h3>
+            <a href="{{ url_for('learn',chp='1.7') }}" class="btn-secondary">Start Learning</a>
+            </div>
+            <p>
+                <b>Introduction:</b> Python's math module provides access to various mathematical functions, which are crucial for scientific computing.
+            </p>
+            <ul>
+                <li>Functions like `round()`, `max()`, `min()`, and mathematical constants like `pi` are available.</li>
+                <li>These functions help perform complex mathematical calculations easily.</li>
+                <li>Utilizing these functions can greatly enhance the functionality of a Python program.</li>
+            </ul>
+        </div>
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

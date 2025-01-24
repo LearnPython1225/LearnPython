@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content" class="smooth-scroll" id="scrollToLearningContent">Learning Content</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+              
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Phase 3: Data Structures</h1>
+            <p><b>Goal:</b> Learn Python’s built-in data structures like lists, dictionaries, and sets.</p>
+            <ul>
+                <li>Lists and Tuples</li>
+                <li>Sets and Dictionaries</li>
+                <li>Data Handling Techniques</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        <!-- Subsection 1: Lists -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Lists</h3>
+            <a href="{{ url_for('learn',chp='3.15') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Lists are used to store multiple items in a single variable, making them one of Python's most versatile data types.
+            <ul>
+                <li>Lists are mutable, allowing the modification of their elements.</li>
+                <li>Lists support various methods such as append(), remove(), pop(), and more for manipulating contents.</li>
+                <li>They can include elements of different types, even other lists.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 2: 2D Lists -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>2D Lists</h3>
+            <a href="{{ url_for('learn',chp='3.16') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> 2D lists are lists of lists, often used to store complex data structures like matrices.
+            <ul>
+                <li>2D lists are accessed using two indices [i][j].</li>
+                <li>They are useful for applications such as game boards, spreadsheets, and more.</li>
+                <li>Manipulating 2D lists involves nested loops for rows and columns.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 3: Tuples -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Tuples</h3>
+            <a href="{{ url_for('learn',chp='3.17') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Tuples are immutable collections, which means they cannot be altered once created.
+            <ul>
+                <li>Tuples are defined by enclosing the elements in parentheses.</li>
+                <li>They are suitable for storing data that should not change, such as coordinates or dates.</li>
+                <li>Tuples support operations like indexing and slicing but do not support methods like append() or remove().</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 4: Sets -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Sets</h3>
+            <a href="{{ url_for('learn',chp='3.18') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Sets are collections of unique elements, useful for operations involving uniqueness and order does not matter.
+            <ul>
+                <li>Sets automatically remove duplicate items.</li>
+                <li>They provide efficient ways to perform set operations like union, intersection, and difference.</li>
+                <li>Sets are mutable but do not allow mutable items like lists as elements.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 5: Dictionary -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Dictionary</h3>
+            <a href="{{ url_for('learn',chp='3.19') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Dictionaries are collections of key:value pairs that are unordered, changeable, and indexed by keys.
+            <ul>
+                <li>Dictionaries allow fast data access via keys, which need to be unique.</li>
+                <li>They can store any type of object in Python as values.</li>
+                <li>Dictionaries are dynamic and can have items added or removed.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 6: Indexing -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Indexing</h3>
+            <a href="{{ url_for('learn',chp='3.20') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Indexing allows you to access individual elements of a sequence directly by their position.
+            <ul>
+                <li>Works with strings, lists, tuples, and other sequence types.</li>
+                <li>Python uses zero-based indexing.</li>
+                <li>Supports negative indexing to access elements from the end of the sequence.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 7: String Formatting -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>String Formatting</h3>
+            <a href="{{ url_for('learn',chp='3.28') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> String formatting provides multiple ways to format strings in Python, making it easier to create structured outputs.
+            <ul>
+                <li>The str.format() method inserts values into a string's placeholder.</li>
+                <li>Supports reordering, alignment, and formatting types within placeholders.</li>
+                <li>Enhances the readability and flexibility of output strings.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 8: Random Numbers -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Random Numbers</h3>
+            <a href="{{ url_for('learn',chp='3.29') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The random module in Python provides a suite of functions that support generating random numbers and choosing random items.
+            <ul>
+                <li>randint() generates a random integer within a specified range.</li>
+                <li>random() generates a random float number between 0 and 1.</li>
+                <li>shuffle() randomly reorders the elements in a list.</li>
+            </ul>
+        </div>
+
+        
+
+        
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

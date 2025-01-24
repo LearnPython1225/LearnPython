@@ -1,0 +1,126 @@
+
+
+a, button {
+    cursor: pointer; /* 鼠标悬停时变成手指 */
+    text-decoration: none; /* 去掉 <a> 默认下划线 */
+
+    color: #f5f5f5; /* 示例文字颜色 */
+    padding: 10px 15px; /* 示例内边距 */
+    border-radius: 8px; /* 示例圆角 */
+    border: none; /* 去掉边框 */
+    display: inline-block; /* 确保 a 像按钮一样展示 */
+}
+
+
+
+/* Profile Menu Container */
+.profile-menu {
+    position: relative;
+    display: inline-block ;
+}
+
+/* Profile Details Dropdown */
+.profile-details {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background: #1e1e1e;
+    color: #f5f5f5;
+    border: 1px solid #3a3a3c;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    width: 300px;
+    z-index: 1000;
+    display: none; /* 你如果想做动画，可以切换到 visibility + opacity + transform */
+}
+
+.profile-details.hidden {
+    display: none;
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #3a3a3c;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #e5e5e5;
+}
+
+.edit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #007aff;
+    transition: color 0.3s ease;
+}
+
+.edit-button:hover {
+    color: #5eb7ff;
+}
+
+/* Profile Actions */
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* 统一的按钮样式 */
+.profile-action {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* 图标与文字间距 */
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    color: #f5f5f5; /* 默认文字颜色 */
+    text-decoration: none;
+}
+
+
+/* 图标样式 */
+.icon-bell, .icon-globe, .icon-user, .icon-smile, .icon-headphones, .icon-logout {
+    font-size: 18px;
+    color: #a1a1a1;
+    transition: color 0.3s ease;
+}
+
+.profile-action:hover .icon-bell,
+.profile-action:hover .icon-globe,
+.profile-action:hover .icon-user,
+.profile-action:hover .icon-smile,
+.profile-action:hover .icon-headphones,
+.profile-action:hover .icon-logout {
+    color: #f5f5f5;
+}
+
+/* 这里给 logout 加一条更高优先级的规则，确保覆盖 */
+.profile-action.logout {
+    color: #ff453a;
+    font-weight: bold;
+}
+
+.profile-action.logout:hover {
+    color: #ff6b68;
+}
+
+/* Profile Footer */
+.profile-footer {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+    color: #808080;
+    border-top: 1px solid #3a3a3c;
+    padding-top: 10px;
+}

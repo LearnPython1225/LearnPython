@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content" class="smooth-scroll" id="scrollToLearningContent">Learning Content</a></li>
+                <li><a href="#community" class="smooth-scroll" id="scrollToCommunity">Community</a></li>
+               
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Phase 2: Control Flow</h1>
+            <p><b>Goal:</b> Master conditionals and loops to understand program logic.</p>
+            <ul>
+                <li>Conditional Statements</li>
+                <li>Loops</li>
+
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        <!-- Subsection 1: If Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>If Statement</h3>
+            <a href="{{ url_for('learn',chp='2.9') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> An if statement allows for conditional execution of code segments based on the truth value of an expression.
+            </p>
+            <ul>
+                <li>Executes a block of code if its condition is true.</li>
+                <li>Can be combined with 'elif' and 'else' for multiple conditions.</li>
+                <li>Helps in decision making by directing the flow of execution.</li>
+            </ul>
+        </div>
+
+        <!-- Subsection 2: Logical Operators -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Logical Operators</h3>
+            <a href="{{ url_for('learn',chp='2.10') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Logical operators allow combining multiple conditions. They are fundamental in developing complex logical expressions.
+            </p>
+            <ul>
+                <li>'and' checks if both conditions are true.</li>
+                <li>'or' checks if at least one condition is true.</li>
+                <li>'not' inverts the truth value of the condition.</li>
+            </ul>
+        </div>
+
+        <!-- Subsection 3: While Loop -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>While Loop</h3>
+            <a href="{{ url_for('learn',chp='2.11') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> A while loop continues to execute a block of code as long as the condition remains true.
+            </p>
+            <ul>
+                <li>Executes repeatedly based on a given Boolean condition.</li>
+                <li>Useful for tasks that require repetition until a condition changes.</li>
+                <li>Must ensure the loop has a breaking condition to prevent infinite loops.</li>
+            </ul>
+        </div>
+
+        <!-- Subsection 4: For Loops -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>For Loops</h3>
+            <a href="{{ url_for('learn',chp='2.12') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> The For loops are used to iterate over a sequence (such as a list, tuple, dictionary, or string) or other iterable objects.
+            </p>
+            <ul>
+                <li>Iterates over elements of a sequence, executing the block each time.</li>
+                <li>Commonly used for looping through ranges, lists, or strings.</li>
+                <li>Provides a simple way to loop a fixed number of times through a sequence.</li>
+            </ul>
+        </div>
+
+        <!-- Subsection 5: Nested Loops -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Nested Loops</h3>
+            <a href="{{ url_for('learn',chp='2.13') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Nested loops involve a loop inside another loop, useful for performing operations on multi-dimensional data structures.
+            </p>
+            <ul>
+                <li>The inner loop completes all its iterations for each single iteration of the outer loop.</li>
+                <li>Commonly used in algorithms that require a pair of elements.</li>
+                <li>Efficient for tasks that require comparing elements in two different lists or arrays.</li>
+            </ul>
+        </div>
+
+        <!-- Subsection 6: Break, Continue, Pass -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Break, Continue, Pass</h3>
+            <a href="{{ url_for('learn',chp='2.14') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Loop control statements like break, continue, and pass alter the behavior of conditionals and loops.
+            </p>
+            <ul>
+                <li>'break' exits out of the enclosing loop.</li>
+                <li>continue' skips the current iteration of the loop and continues with the next.</li>
+                <li>'pass' acts as a placeholder and does nothing, used when syntax requires a statement but no action is needed.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 7: Exception Handling -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Exception Handling</h3>
+            <a href="{{ url_for('learn',chp='2.30') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Exception handling in Python involves using 'try' and 'except' blocks to catch exceptions, ensuring the program can handle errors gracefully without crashing.
+            </p>
+            <ul>
+                <li>The 'try' block lets you test a block of code for errors.</li>
+                <li>The 'except' block lets you handle the error with a custom response.</li>
+                <li>'finally' code block will execute regardless of the result of the try- and except blocks.</li>
+
+            </ul>
+        </div>
+
+        
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

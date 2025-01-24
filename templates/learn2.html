@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn Python</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='learn2.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='coding.css') }}">
+  
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+  <!-- Add these lines in the head section, after your existing scripts -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <meta name="user-id" content="{{ session.get('user_id', 'anonymous') }}">
+  <script src="{{ url_for('static', filename='js/security.js') }}"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+   
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="{{ url_for('stage', stage_number=content2.stages | safe ) }}">stage {{ content2.stages | safe }}</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Left Panel -->
+        <div class="left-panel">
+            <div class="left-top">
+                <h2>{{ content2.title | safe }}</h2>
+                <p>{{ content2.des | safe }}</p>
+                <h3>Key Point:</h3>
+                <ul>
+                    <li>{{ content2.keypoint1 | safe }}</li>
+                    <li>{{ content2.keypoint2 | safe }}</li>
+                    <li>{{ content2.keypoint3 | safe }}</li>
+                    <li>{{ content2.keypoint4 | safe }}</li>
+                    <li>{{ content2.keypoint5 | safe }}</li>
+                    <li>{{ content2.keypoint6 | safe }}</li>
+                </ul>
+                    
+
+                <div class="section-title">Examples</div>
+                <pre class="language-python">
+                    <code class="language-python">{{ content2.example }}</code>
+                        </pre>
+
+
+                <!-- <div class="section-title">Tasks</div>
+                <p>{{ content2.task1 | safe }}</p>
+                <p>{{ content2.task2 | safe }}</p> -->
+            </div>
+
+
+        </div>
+
+        <div class="resizer" id="resizer"></div>
+
+        <!-- Right Panel -->
+        <div class="right-panel">
+            <h3>
+                <div id="ai-assistance-header">
+                    <span>AI Assistance</span>
+                </div>
+            </h3>
+            <div class="chatgpt-container">
+                <div id="chatMessages"></div>
+                <div class="chat-input">
+                    <input type="text" id="userMessage" placeholder="Ask ChatGPT...">
+                    <button id="sendBtn">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script src="{{ url_for('static', filename='js/monaco_editor.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/learn.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/chatgpt.js') }}"></script>
+    <script src="prism.js"></script>
+</body>
+</html>
+

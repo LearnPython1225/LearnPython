@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content">Learning Content</a></li>
+                <li><a href="#community">Community</a></li>
+           
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Stage 1: File Operations</h1>
+            <p><b>Goal:</b> Learn how to manage files through Python, including reading, writing, and handling files.</p>
+            <ul>
+                <li>File Reading and Writing</li>
+                <li>File Management</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Read a File</h3>
+            <a href="{{ url_for('learn2',chp='1.32') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Reading files is a common operation that involves opening a file to read its contents.
+            </p>
+            <ul>
+                <li>Python provides built-in functions like open() which can be used with the 'r' mode to read files.</li>
+                <li>The read(), readline(), and readlines() methods offer different ways to retrieve contents from a file.</li>
+                <li>Always ensure to close the file after reading or use a with statement to handle it automatically.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Write to a File</h3>
+            <a href="{{ url_for('learn2',chp='1.34') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Writing to files is essential for outputting data to a file for storage or further use.
+            </p>
+            <ul>
+                <li>Open a file using the 'w' mode to write text or 'wb' for binary data.</li>
+                <li>The write() function writes the string to the file, overwriting any existing content.</li>
+                <li>To append to a file instead of overwriting, use the 'a' mode.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Copy a File</h3>
+            <a href="{{ url_for('learn2',chp='1.33') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Copying files involves creating a new file that has the same content as an existing file.
+            </p>
+            <ul>
+                <li>The shutil module offers a copy() function that can be used to copy the contents of a file.</li>
+                <li>Copying is especially useful for creating backups of important files.</li>
+                <li>Ensure that the destination directory exists and has the appropriate write permissions.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Move a File</h3>
+            <a href="{{ url_for('learn2',chp='1.35') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Moving a file involves changing its directory or renaming the file within the same directory.
+            </p>
+            <ul>
+                <li>The shutil.move() function is used for moving files and provides functionality similar to the UNIX mv command.</li>
+                <li>Moving files can also be done using os.rename() for renaming or moving within the same filesystem.</li>
+                <li>Consider file permissions and existing file handling when moving files.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Delete a File</h3>
+            <a href="{{ url_for('learn2',chp='1.36') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Deleting files involves removing them from the filesystem, which is an irreversible operation that should be handled with caution.
+            </p>
+            <ul>
+                <li>The os.remove() function can be used to delete a file.</li>
+                <li>Always perform checks to ensure the file exists before attempting to delete it to avoid errors.</li>
+                <li>Consider implementing a trash or undo feature for safer file deletion operations in applications.</li>
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>File Detection</h3>
+            <a href="{{ url_for('learn2',chp='1.31') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Checking if a file or directory exists before performing operations prevents errors and ensures code reliability.
+            </p>
+            <ul>
+                <li>Use the os.path module to check for the existence of files and directories.</li>
+                <li>Common methods include os.path.exists() for checking the existence of a path.</li>
+                <li>os.path.isfile() and os.path.isdir() can be used to check if the path is a file or directory, respectively.</li>
+            </ul>
+        </div>
+
+
+
+        
+        
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>

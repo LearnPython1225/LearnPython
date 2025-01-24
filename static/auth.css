@@ -1,0 +1,204 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #111;
+    color: #f5f5f7;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #f5f5f7;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #f5f5f7;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0 10px;
+    transition: color 0.2s ease;
+}
+
+.nav a:hover {
+    color: #bbb;
+}
+
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background: linear-gradient(to bottom, #000 10%, #111);
+}
+
+.auth-box {
+    background: #1c1c1e;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.auth-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #f5f5f7;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #ccc;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    background: #2c2c2e;
+    color: #f5f5f7;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: #3c3c3e;
+}
+
+/* Buttons */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 24px;
+    background: #0071e3;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #005bb5;
+}
+
+/* Links */
+a {
+    color: #0071e3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+a:hover {
+    color: #005bb5;
+    text-decoration: underline;
+}
+
+.forgot-password {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.terms {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+    text-align: center;
+}
+
+.terms a {
+    color: #0071e3;
+}
+
+.terms a:hover {
+    color: #005bb5;
+}
+
+/* Divider */
+.divider {
+    margin: 2rem 0;
+    color: #ccc;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background: #333;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: #888;
+    font-size: 0.9rem;
+    background: #000;
+}

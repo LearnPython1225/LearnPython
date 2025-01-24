@@ -1,0 +1,174 @@
+/* General Styles */
+:root {
+  --background-color: #000000;
+  --card-background: #1c1c1e;
+  --text-color: #f5f5f7;
+  --accent-color: #0071e3;
+  --secondary-text: #86868b;
+  --border-radius: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.logo a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent-color);
+}
+
+/* Main Content */
+.subscription-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 60px;
+  text-align: center;
+}
+
+.subscription-container h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.plan {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  width: calc(41% - 20px);
+  min-width: 280px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.plan h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.plan p {
+  color: var(--secondary-text);
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.plan ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.plan ul li {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+  font-size: 17px;
+}
+
+.plan ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+#money {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* PayPal Button Container */
+#paypal-container-3KYQQGX96RP5C {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+  font-size: 0.9rem;
+  background: #000;
+}
+
+@media (max-width: 768px) {
+  .plan {
+    width: 100%;
+  }
+  
+  .subscription-container h1 {
+    font-size: 36px;
+  }
+  
+  .header {
+    padding: 1rem;
+  }
+  
+  .nav ul {
+    gap: 1rem;
+  }
+}
+

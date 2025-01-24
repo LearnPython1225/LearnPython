@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Learn Python</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='phase1-9.css') }}">
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="{{ url_for('home') }}">LearnPython</a>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="{{ url_for('unlock') }}">Learning Path</a></li>
+                <li><a href="#" id="scrollToTop">Home</a></li>
+                <li><a href="#learning-content">Learning Content</a></li>
+                <li><a href="#community">Community</a></li>
+              
+            </ul>
+        </nav>
+        <div class="menu-icon" id="menuIcon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+</body>
+</html>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-intro">
+            <h1>Stage 2: Graphics (Turtle)</h1>
+            <p><b>Goal:</b> Learn how to create simple graphics and animations using Python’s Turtle module.</p>
+            <ul>
+                <li>Basic Graphics</li>
+                <li>Drawing Simple Shapes</li>
+                <li>Simple Project</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Learning Section -->
+    <section class="learning-section" id="learning-content">
+        <h2>Learning Content</h2>
+        
+
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Introduction to Turtle Graphics</h3>
+            <a href="{{ url_for('learn2',chp='2.1') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Learn the basics of the Turtle module, including setting up the environment and managing the turtle’s visibility.
+            </p>
+            <ul>
+                <li><tt>import turtle</tt> - This command imports the turtle module, enabling you to use its functions.</li>
+                <li><tt>turtle.showturtle()</tt> - Displays the turtle icon on the screen.</li>
+                <li><tt>turtle.hideturtle()</tt> - Hides the turtle icon from the screen while still allowing movement.</li>
+                <li><tt>turtle.done()</tt> - Keeps the turtle graphics window open until you manually close it.</li>
+               
+            </ul>
+        </div>
+
+
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Basic Turtle Operations</h3>
+            <a href="{{ url_for('learn2',chp='2.2') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Learn how to control the turtle's movement, position, and speed to create basic drawings.
+            </p>
+            <ul>
+                <li><tt>turtle.position()</tt> - Returns the current position of the turtle as (x, y) coordinates.</li>
+                <li><tt>turtle.forward(distance)</tt> - Moves the turtle forward by the specified distance.</li>
+                <li><tt>turtle.right(angle)</tt> - Rotates the turtle to the right by the specified angle.</li>
+                <li><tt>turtle.left(angle)</tt> - Rotates the turtle to the left by the specified angle.</li>
+                <li><tt>turtle.goto(x, y)</tt> - Moves the turtle to the specified (x, y) position.</li>
+                <li><tt>turtle.speed(speed)</tt> - Sets the turtle's speed, where 0 is the fastest, and 1-10 are gradual speeds.</li>
+               
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3> Drawing and Filling Shapes</h3>
+            <a href="{{ url_for('learn2',chp='2.3') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Learn how to use the Turtle module to draw basic shapes and fill them with color.
+            </p>
+            <ul>
+                <li><tt>turtle.circle(radius)</tt> - Draws a circle with the specified radius.</li>
+                <li><tt>turtle.penup()</tt> - Lifts the pen, so the turtle moves without drawing.</li>
+                <li><tt>turtle.pendown()</tt> - Puts the pen down, so the turtle draws as it moves.</li>
+                <li><tt>turtle.color(color)</tt> - Sets the pen and fill color. Accepts color names (e.g., 'red') or RGB values.</li>
+                <li><tt>turtle.begin_fill()</tt> - Marks the starting point for a filled shape.</li>
+                <li><tt>turtle.end_fill()</tt> - Marks the endpoint and fills the shape drawn since <tt>begin_fill()</tt>.</li>
+               
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Drawing Complex Patterns</h3>
+            <a href="{{ url_for('learn2',chp='2.4') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Learn how to use loops and advanced Turtle commands to create complex and repetitive patterns.
+            </p>
+            <ul>
+                <li><tt>for loops</tt>  - Use loops to repeat drawing commands and create patterns efficiently.</li>
+    
+            </ul>
+        </div>
+
+        
+        <!-- Subsection 1: Print Statement -->
+        <div class="lesson" id="lesson-print-statement">
+            <div class="title">
+            <h3>Screen and Event Controls</h3>
+            <a href="{{ url_for('learn2',chp='2.5') }}" class="btn-secondary">Start Learning</a>
+            </div>
+
+            <p>
+                <b>Introduction:</b> Learn how to control the turtle graphics screen and handle user events like key presses and mouse clicks.
+            </p>
+            <ul>
+                <li><tt>turtle.listen()</tt> - Puts the turtle screen in 'listening mode', allowing it to detect user inputs.</li>
+                <li><tt>turtle.onkey(function, key)</tt> - Binds a specific function to a key press event. For example, pressing 'w' can move the turtle forward.</li>
+                <li><tt>turtle.onclick(function)</tt> - Binds a function to mouse click events on the turtle screen.</li>
+               
+            </ul>
+        </div>
+        
+
+        
+        
+
+
+    </section>
+
+    
+
+    <!-- Community Section -->
+    <section class="info-section" id="community">
+        <h2>Join Our Community</h2>
+        <p>Connect with learners worldwide. Ask questions, share insights, and grow together.</p>
+        <br>
+        <a href="#forum" class="btn-primary">Visit the Forum</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 LearnPython. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+
+</body>
+</html>
