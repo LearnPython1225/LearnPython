@@ -775,23 +775,30 @@ def serve_root_files(filename):
 
 @app.route('/sitemap.xml')
 def serve_sitemap():
-    try:
-        # Get absolute path and verify it's within app directory
-        sitemap_path = Path(app.root_path) / 'sitemap.xml'
-        if not sitemap_path.is_file():
-            abort(404)
-            
-        with open(sitemap_path, 'r') as file:
-            sitemap_content = file.read()
-            
-        return Response(
-            sitemap_content, 
-            mimetype='application/xml',
-            headers={'Content-Type': 'application/xml; charset=utf-8'}
-        )
-    except Exception as e:
-        app.logger.error(f"Error serving sitemap: {e}")
-        abort(500)
+    sitemap_content = """<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+            <loc>https://learnpython-zabb.onrender.com/</loc>
+            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
+            <priority>1.00</priority>
+        </url>
+        <url>
+            <loc>https://learnpython-zabb.onrender.com/login</loc>
+            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
+            <priority>0.80</priority>
+        </url>
+        <url>
+            <loc>https://learnpython-zabb.onrender.com/register</loc>
+            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
+            <priority>0.80</priority>
+        </url>
+        <url>
+            <loc>https://learnpython-zabb.onrender.com/reset</loc>
+            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
+            <priority>0.64</priority>
+        </url>
+    </urlset>"""
+    return Response(sitemap_content, mimetype='application/xml')
 
 if __name__ == '__main__':
     app.run(debug=False)
