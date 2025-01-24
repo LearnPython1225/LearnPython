@@ -2,6 +2,8 @@ from flask import Flask, render_template, redirect, url_for, request, session, j
 from flask_cors import CORS
 from flask_wtf.csrf import CSRFProtect
 
+from pathlib import Path
+
 from werkzeug.security import generate_password_hash, check_password_hash
 import openai
 import os
@@ -773,9 +775,23 @@ def serve_root_files(filename):
 
 @app.route('/sitemap.xml')
 def serve_sitemap():
-    with open('sitemap.xml', 'r') as file:
-        sitemap_content = file.read()
-    return Response(sitemap_content, mimetype='application/xml')
+    try:
+        # Get absolute path and verify it's within app directory
+        sitemap_path = Path(app.root_path) / 'sitemap.xml'
+        if not sitemap_path.is_file():
+            abort(404)
+            
+        with open(sitemap_path, 'r') as file:
+            sitemap_content = file.read()
+            
+        return Response(
+            sitemap_content, 
+            mimetype='application/xml',
+            headers={'Content-Type': 'application/xml; charset=utf-8'}
+        )
+    except Exception as e:
+        app.logger.error(f"Error serving sitemap: {e}")
+        abort(500)
 
 if __name__ == '__main__':
     app.run(debug=False)
