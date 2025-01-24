@@ -770,6 +770,10 @@ def get_user_profile():
 def serve_root_files(filename):
     return send_from_directory('.', filename)
 
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('.', 'sitemap.xml')
+
 if __name__ == '__main__':
     app.run(debug=False)
 
