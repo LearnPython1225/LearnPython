@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request, session, jsonify,flash
+from flask import Flask, render_template, redirect, url_for, request, session, jsonify,flash, send_from_directory
 from flask_cors import CORS
 from flask_wtf.csrf import CSRFProtect
 
@@ -765,6 +765,10 @@ def get_user_profile():
         return jsonify({"success": True, "user": users}), 200
     else:
         return jsonify({"success": False, "message": "User not found"}), 404
+    
+@app.route('/<filename>')
+def serve_root_files(filename):
+    return send_from_directory('.', filename)
 
 if __name__ == '__main__':
     app.run(debug=False)
