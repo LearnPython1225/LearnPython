@@ -563,7 +563,7 @@ def run_code():
     # 将代码发送到沙盒服务
     try:
         # 沙盒服务的 URL (Render 的沙盒 Web 服务地址)
-        sandbox_service_url = "https://sandbox-service.onrender.com/execute"
+        sandbox_service_url = "https://learnpython-sandbox.onrender.com/execute"
 
         # 向沙盒服务发送 POST 请求
         response = requests.post(
