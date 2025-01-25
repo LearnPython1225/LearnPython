@@ -245,6 +245,13 @@ def login():
 
 csrf.exempt(login)
 
+@app.route('/term_and_condition', methods=['GET'])
+def term_and_condition():
+    return render_template('term_and_condition.html')
+
+
+
+
 @app.route('/logout', methods=['GET'])
 def logout():
     session.clear()
