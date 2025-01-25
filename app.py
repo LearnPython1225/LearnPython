@@ -367,7 +367,7 @@ def unlock():
         tiers = get_tier_access(session.get('email'))
 
         # 检查是否具有访问权限
-        if 'Standard Tier' in tiers or 'Full Access Plan' in tiers:
+        if 'Additional Learning Materials' in tiers or 'Standard Tier' in tiers or 'Full Access Plan' in tiers:
              return render_template('unlock.html')
         else:
             return redirect(url_for('home') + '#pricing')  # 没有权限的用户重定向到主页
@@ -775,30 +775,23 @@ def serve_root_files(filename):
 
 @app.route('/sitemap.xml')
 def serve_sitemap():
-    sitemap_content = """<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url>
-            <loc>https://learnpython-zabb.onrender.com/</loc>
-            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
-            <priority>1.00</priority>
-        </url>
-        <url>
-            <loc>https://learnpython-zabb.onrender.com/login</loc>
-            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
-            <priority>0.80</priority>
-        </url>
-        <url>
-            <loc>https://learnpython-zabb.onrender.com/register</loc>
-            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
-            <priority>0.80</priority>
-        </url>
-        <url>
-            <loc>https://learnpython-zabb.onrender.com/reset</loc>
-            <lastmod>2025-01-24T18:19:44+00:00</lastmod>
-            <priority>0.64</priority>
-        </url>
-    </urlset>"""
-    return Response(sitemap_content, mimetype='application/xml')
+    try:
+        # Get absolute path and verify it's within app directory
+        sitemap_path = Path(app.root_path) / 'sitemap.xml'
+        if not sitemap_path.is_file():
+            abort(404)
+            
+        with open(sitemap_path, 'r') as file:
+            sitemap_content = file.read()
+            
+        return Response(
+            sitemap_content, 
+            mimetype='application/xml',
+            headers={'Content-Type': 'application/xml; charset=utf-8'}
+        )
+    except Exception as e:
+        app.logger.error(f"Error serving sitemap: {e}")
+        abort(500)
 
 if __name__ == '__main__':
     app.run(debug=False)
