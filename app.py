@@ -4,6 +4,8 @@ from flask_wtf.csrf import CSRFProtect
 
 from pathlib import Path
 
+import requests
+
 from werkzeug.security import generate_password_hash, check_password_hash
 import openai
 import os
@@ -538,15 +540,17 @@ def rate_limit(max_requests=10, time_window=60):
 # Update the run_code route with security measures
 @app.route('/run_code', methods=['POST'])
 def run_code():
+    # 检查用户是否已登录
     if not session.get('logged_in'):
         return jsonify({"error": "Unauthorized"}), 401
-        
+
+    # 获取用户提交的代码
     data = request.get_json()
     code = data.get('code', '')
 
     # 禁止危险操作（例如文件读写、系统命令）
     blacklist = [
-        'import os','import turtle', 'import sys', 'import subprocess', '__import__',
+        'import os', 'import turtle', 'import sys', 'import subprocess', '__import__',
         'eval(', 'exec(', 'open(', 'write(', 'read('
     ]
     if any(keyword in code for keyword in blacklist):
@@ -556,33 +560,27 @@ def run_code():
     if len(code) > 1000:
         return jsonify({"error": "Code too long"}), 413
 
+    # 将代码发送到沙盒服务
     try:
-        # 创建临时文件保存用户代码
-        with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
-            f.write(code)
-            temp_file = f.name
+        # 沙盒服务的 URL (Render 的沙盒 Web 服务地址)
+        sandbox_service_url = "https://sandbox-service.onrender.com/execute"
 
-        # 运行用户代码的 Docker 容器
-        container_name = f"python-sandbox-{uuid.uuid4()}"
-        command = [
-            "docker", "run", "--rm", "--network", "none", "--memory=128m", "--cpus=1",
-            "--name", container_name,
-            "-v", f"{temp_file}:/sandbox/user_code.py:ro",
-            "python-sandbox", "python3", "/sandbox/user_code.py"
-        ]
-        result = subprocess.run(command, capture_output=True, text=True, timeout=10)
-        
-        # 删除临时文件
-        os.unlink(temp_file)
+        # 向沙盒服务发送 POST 请求
+        response = requests.post(
+            sandbox_service_url,
+            json={"code": code},
+            timeout=10
+        )
 
-        return jsonify({
-            "output": result.stdout.strip(),
-            "error": result.stderr.strip()
-        })
-        
-    except subprocess.TimeoutExpired:
+        # 检查沙盒服务的响应
+        if response.status_code == 200:
+            return jsonify(response.json())
+        else:
+            return jsonify({"error": "Sandbox error", "details": response.json()}), response.status_code
+
+    except requests.exceptions.Timeout:
         return jsonify({"error": "Execution timeout"}), 408
-    except Exception as e:
+    except requests.exceptions.RequestException as e:
         return jsonify({"error": str(e)}), 500
     
 
