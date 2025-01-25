@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://learnpython-zabb.onrender.com/sitemap.xml
