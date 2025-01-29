@@ -31,7 +31,7 @@
     <!-- ✅ JSON-LD 结构化数据 (Schema.org) -->
     <script type="application/ld+json">
         {
-          "@context": "https://schema.org/",
+          "@context": "https://schema.org",
           "@type": "Course",
           "name": "Learn Python - Master Python from Scratch",
           "description": "Comprehensive learning paths meticulously crafted for individuals starting from zero, specifically designed to guide beginners.",
@@ -47,7 +47,8 @@
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
               "url": "https://learnpython-zabb.onrender.com/standard",
-              "validFrom": "2025-01-01"
+              "validFrom": "2025-01-01",
+              "category": "Online Course"
             },
             {
               "@type": "Offer",
@@ -55,7 +56,8 @@
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
               "url": "https://learnpython-zabb.onrender.com/learning_materials",
-              "validFrom": "2025-01-01"
+              "validFrom": "2025-01-01",
+              "category": "Online Course"
             },
             {
               "@type": "Offer",
@@ -63,13 +65,15 @@
               "priceCurrency": "USD",
               "availability": "https://schema.org/InStock",
               "url": "https://learnpython-zabb.onrender.com/full_access_plan",
-              "validFrom": "2025-01-01"
+              "validFrom": "2025-01-01",
+              "category": "Online Course"
             }
           ],
           "hasCourseInstance": {
             "@type": "CourseInstance",
             "name": "Python Beginner Course",
-            "courseMode": "online"
+            "courseMode": "online",
+            "courseWorkload": "5 hours per week"
           }
         }
         </script>
